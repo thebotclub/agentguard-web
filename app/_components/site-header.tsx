@@ -30,7 +30,7 @@ export function SiteHeader() {
             </a>
             <a
               className="btn btn-primary btn-sm"
-              href="https://cal.com/hanikoshaji/cps230-review"
+              href="https://calendly.com/hani-thebot/30min"
             >
               Book a review
             </a>

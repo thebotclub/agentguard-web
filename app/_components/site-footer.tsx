@@ -39,7 +39,7 @@ export function SiteFooter() {
           <div>
             <h4>Company</h4>
             <ul>
-              <li><a href="https://cal.com/hanikoshaji/cps230-review">Book a review</a></li>
+              <li><a href="https://calendly.com/hani-thebot/30min">Book a review</a></li>
               <li><a href="mailto:[email protected]">Contact</a></li>
               <li><a href="https://tribunal.dev">Tribunal (coding agents)</a></li>
             </ul>

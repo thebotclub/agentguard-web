@@ -24,7 +24,7 @@ export default function OpenClawPage() {
             running an 18-claw production fleet since 2024.
           </p>
           <div className="cta-row" style={{ justifyContent: 'flex-start', marginTop: 24 }}>
-            <a className="btn btn-primary" href="https://cal.com/hanikoshaji/cps230-review">
+            <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
               Book a fleet review
             </a>
             <a className="btn btn-secondary" href="https://docs.agentguard.tech/openclaw">
@@ -152,7 +152,7 @@ $ openclaw plugins list
             Stop guessing what your fleet is doing.
           </h2>
           <div className="cta-row" style={{ marginTop: 24 }}>
-            <a className="btn btn-primary" href="https://cal.com/hanikoshaji/cps230-review">
+            <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
               Book a fleet review
             </a>
             <Link className="btn btn-secondary" href="/pricing">

@@ -18,7 +18,7 @@ export default function Home() {
             financial services in Australia and APAC.
           </p>
           <div className="cta-row">
-            <a className="btn btn-primary" href="https://cal.com/hanikoshaji/cps230-review">
+            <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
               Book a CPS 230 readiness review
             </a>
             <a className="btn btn-secondary" href="https://demo.agentguard.tech">
@@ -276,7 +276,7 @@ plugins:
             Ship the agent. Pass the audit.
           </h2>
           <div className="cta-row" style={{ marginTop: 24 }}>
-            <a className="btn btn-primary" href="https://cal.com/hanikoshaji/cps230-review">
+            <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
               Book a CPS 230 readiness review
             </a>
             <a className="btn btn-secondary" href="https://demo.agentguard.tech">

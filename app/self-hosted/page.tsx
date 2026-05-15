@@ -22,7 +22,7 @@ export default function SelfHostedPage() {
             request time. Suitable for ISM-aligned and air-gapped environments.
           </p>
           <div className="cta-row" style={{ justifyContent: 'flex-start', marginTop: 24 }}>
-            <a className="btn btn-primary" href="https://cal.com/hanikoshaji/cps230-review">
+            <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
               Talk to us about on-prem
             </a>
             <a className="btn btn-secondary" href="https://docs.agentguard.tech/self-hosted">
@@ -120,7 +120,7 @@ $ kubectl -n agentguard get pods
             through the install in your environment.
           </p>
           <div className="cta-row" style={{ marginTop: 24 }}>
-            <a className="btn btn-primary" href="https://cal.com/hanikoshaji/cps230-review">
+            <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
               Book an on-prem review
             </a>
           </div>

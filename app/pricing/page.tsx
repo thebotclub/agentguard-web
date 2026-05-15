@@ -93,7 +93,7 @@ export default function PricingPage() {
                     On-prem / VPC deployment, 99.95% SLA, dedicated SE, custom retention, procurement-friendly contract.
                   </p>
                 </div>
-                <a className="btn btn-primary" href="https://cal.com/hanikoshaji/cps230-review">
+                <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
                   Book a call
                 </a>
               </div>
@@ -142,7 +142,7 @@ export default function PricingPage() {
             Want a tailored quote?
           </h2>
           <div className="cta-row" style={{ marginTop: 24 }}>
-            <a className="btn btn-primary" href="https://cal.com/hanikoshaji/cps230-review">Book a CPS 230 readiness review</a>
+            <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">Book a CPS 230 readiness review</a>
             <a className="btn btn-secondary" href="mailto:[email protected]">[email protected]</a>
           </div>
         </div>

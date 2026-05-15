@@ -29,7 +29,7 @@ export default function CompliancePage() {
             , and ISO 42001 controls. One PDF. Signed. Anchored. Done.
           </p>
           <div className="cta-row" style={{ justifyContent: 'flex-start', marginTop: 24 }}>
-            <a className="btn btn-primary" href="https://cal.com/hanikoshaji/cps230-review">
+            <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
               Book a readiness review
             </a>
             <a className="btn btn-secondary" href="https://demo.agentguard.tech/sample-pack.pdf">
@@ -200,7 +200,7 @@ export default function CompliancePage() {
             Stop building bespoke evidence packs. Generate them.
           </h2>
           <div className="cta-row" style={{ marginTop: 24 }}>
-            <a className="btn btn-primary" href="https://cal.com/hanikoshaji/cps230-review">
+            <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
               Book a CPS 230 readiness review
             </a>
             <a className="btn btn-secondary" href="https://demo.agentguard.tech">
