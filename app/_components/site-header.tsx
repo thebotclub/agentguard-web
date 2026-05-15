@@ -14,6 +14,7 @@ export function SiteHeader() {
         <nav className="nav" aria-label="Primary">
           <div className="nav-links">
             <Link href="/openclaw">OpenClaw</Link>
+            <Link href="/playground">Playground</Link>
             <Link href="/compliance">Compliance</Link>
             <Link href="/pricing">Pricing</Link>
             <Link href="/self-hosted">Self-hosted</Link>
@@ -22,12 +23,12 @@ export function SiteHeader() {
           </div>
           <div className="nav-actions">
             <ThemeToggle />
-            <a
+            <Link
               className="btn btn-secondary btn-sm"
-              href="https://demo.agentguard.tech"
+              href="/playground"
             >
               Demo
-            </a>
+            </Link>
             <a
               className="btn btn-primary btn-sm"
               href="https://calendly.com/hani-thebot/30min"

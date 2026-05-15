@@ -21,9 +21,9 @@ export default function Home() {
             <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
               Book a CPS 230 readiness review
             </a>
-            <a className="btn btn-secondary" href="https://demo.agentguard.tech">
+            <Link className="btn btn-secondary" href="/playground">
               Try the demo
-            </a>
+            </Link>
           </div>
           <div className="hero-meta">
             <div className="install-row">
@@ -279,9 +279,9 @@ plugins:
             <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
               Book a CPS 230 readiness review
             </a>
-            <a className="btn btn-secondary" href="https://demo.agentguard.tech">
+            <Link className="btn btn-secondary" href="/playground">
               Try the demo
-            </a>
+            </Link>
           </div>
         </div>
       </section>

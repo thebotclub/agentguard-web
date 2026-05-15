@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Compliance — CPS 230, EU AI Act, ISO 42001',
@@ -203,9 +204,9 @@ export default function CompliancePage() {
             <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
               Book a CPS 230 readiness review
             </a>
-            <a className="btn btn-secondary" href="https://demo.agentguard.tech">
+            <Link className="btn btn-secondary" href="/playground">
               Try the demo
-            </a>
+            </Link>
           </div>
         </div>
       </section>

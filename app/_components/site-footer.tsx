@@ -23,7 +23,7 @@ export function SiteFooter() {
               <li><Link href="/compliance">Compliance pack</Link></li>
               <li><Link href="/pricing">Pricing</Link></li>
               <li><Link href="/self-hosted">Self-hosted</Link></li>
-              <li><a href="https://demo.agentguard.tech">Live demo</a></li>
+              <li><Link href="/playground">Live demo</Link></li>
             </ul>
           </div>
           <div>
