@@ -1,0 +1,6 @@
+# AgentGuard — agentguard.tech
+User-agent: *
+Allow: /
+Disallow: /samples/
+
+Sitemap: https://agentguard.tech/sitemap.xml
