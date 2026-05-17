@@ -13,7 +13,7 @@ export default function BlogPage() {
           We&rsquo;re working on the first set of posts: CPS 230 readiness
           checklists, OpenClaw fleet incident reports, and what auditors
           actually open first in a compliance pack. Subscribe via{' '}
-          <a href="https://github.com/thebotclub/agentguard" style={{ color: 'var(--teal)' }}>GitHub</a>{' '}
+          <a href="https://github.com/thebotclub/agentguard-core" style={{ color: 'var(--teal)' }}>GitHub</a>{' '}
           for now &mdash; we&rsquo;ll post here when posts go live.
         </p>
         <div className="cta-row" style={{ justifyContent: 'flex-start', marginTop: 28 }}>

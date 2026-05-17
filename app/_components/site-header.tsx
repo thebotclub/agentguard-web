@@ -19,7 +19,7 @@ export function SiteHeader() {
             <Link href="/pricing">Pricing</Link>
             <Link href="/self-hosted">Self-hosted</Link>
             <a href="https://github.com/thebotclub/agentguard-core#readme">Docs</a>
-            <a href="https://github.com/thebotclub/agentguard">GitHub</a>
+            <a href="https://github.com/thebotclub/agentguard-core">GitHub</a>
           </div>
           <div className="nav-actions">
             <ThemeToggle />
