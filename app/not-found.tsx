@@ -11,7 +11,7 @@ export default function NotFound() {
         </p>
         <div className="cta-row" style={{ marginTop: 24 }}>
           <Link className="btn btn-primary" href="/">Back to home</Link>
-          <a className="btn btn-secondary" href="https://docs.agentguard.tech">Read the docs</a>
+          <a className="btn btn-secondary" href="https://github.com/thebotclub/agentguard-core#readme">Read the docs</a>
         </div>
       </div>
     </section>

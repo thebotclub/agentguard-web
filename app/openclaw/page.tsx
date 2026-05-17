@@ -27,7 +27,7 @@ export default function OpenClawPage() {
             <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
               Book a fleet review
             </a>
-            <a className="btn btn-secondary" href="https://docs.agentguard.tech/openclaw">
+            <a className="btn btn-secondary" href="https://github.com/thebotclub/agentguard-core/blob/main/SPEC.md#openclaw">
               Plugin docs →
             </a>
           </div>

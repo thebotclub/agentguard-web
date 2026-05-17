@@ -18,7 +18,7 @@ export default function BlogPage() {
         </p>
         <div className="cta-row" style={{ justifyContent: 'flex-start', marginTop: 28 }}>
           <Link className="btn btn-secondary" href="/">Back to home</Link>
-          <a className="btn btn-ghost" href="https://docs.agentguard.tech">Read the docs →</a>
+          <a className="btn btn-ghost" href="https://github.com/thebotclub/agentguard-core#readme">Read the docs →</a>
         </div>
       </div>
     </section>

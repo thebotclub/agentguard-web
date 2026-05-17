@@ -25,7 +25,7 @@ export default function SelfHostedPage() {
             <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
               Talk to us about on-prem
             </a>
-            <a className="btn btn-secondary" href="https://docs.agentguard.tech/self-hosted">
+            <a className="btn btn-secondary" href="https://github.com/thebotclub/agentguard-core/tree/main/self-hosted#readme">
               Read self-hosted docs →
             </a>
           </div>

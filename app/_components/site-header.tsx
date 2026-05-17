@@ -18,7 +18,7 @@ export function SiteHeader() {
             <Link href="/compliance">Compliance</Link>
             <Link href="/pricing">Pricing</Link>
             <Link href="/self-hosted">Self-hosted</Link>
-            <a href="https://docs.agentguard.tech">Docs</a>
+            <a href="https://github.com/thebotclub/agentguard-core#readme">Docs</a>
             <a href="https://github.com/thebotclub/agentguard">GitHub</a>
           </div>
           <div className="nav-actions">
