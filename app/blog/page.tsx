@@ -1,24 +1,65 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = { title: 'Blog' };
+export const metadata: Metadata = {
+  title: 'Blog',
+  description: 'Notes on AI agent governance, APRA CPS 230, and the EU AI Act — from an Australian fintech operator running an OpenClaw fleet in production.',
+};
+
+const posts = [
+  {
+    slug: 'reading-apra-may-1-letter',
+    title: "Reading APRA's May 1 letter as an Australian fintech CTO",
+    subtitle: 'What you need to ship before 2 August 2026.',
+    date: '15 May 2026',
+    readTime: '12 min',
+    tags: ['APRA', 'CPS 230', 'EU AI Act'],
+  },
+];
 
 export default function BlogPage() {
   return (
-    <section className="section flush" style={{ paddingTop: 96 }}>
-      <div className="container" style={{ maxWidth: 720 }}>
+    <section className="section">
+      <div className="container" style={{ maxWidth: 880 }}>
         <span className="eyebrow plain">Blog</span>
-        <h1 style={{ marginTop: 18 }}>Coming soon.</h1>
-        <p className="lede" style={{ marginTop: 18 }}>
-          We&rsquo;re working on the first set of posts: CPS 230 readiness
-          checklists, OpenClaw fleet incident reports, and what auditors
-          actually open first in a compliance pack. Subscribe via{' '}
-          <a href="https://github.com/thebotclub/agentguard-core" style={{ color: 'var(--teal)' }}>GitHub</a>{' '}
-          for now &mdash; we&rsquo;ll post here when posts go live.
+        <h1 style={{ marginTop: 14 }}>Notes from production.</h1>
+        <p className="lede" style={{ marginTop: 14, maxWidth: '52ch' }}>
+          What we learn running an 18-agent OpenClaw fleet, talking to AU
+          fintech CROs, and reading the regulatory tea leaves.
         </p>
-        <div className="cta-row" style={{ justifyContent: 'flex-start', marginTop: 28 }}>
-          <Link className="btn btn-secondary" href="/">Back to home</Link>
-          <a className="btn btn-ghost" href="https://github.com/thebotclub/agentguard-core#readme">Read the docs →</a>
+
+        <div style={{ marginTop: 48, display: 'flex', flexDirection: 'column', gap: 24 }}>
+          {posts.map((p) => (
+            <Link
+              key={p.slug}
+              href={`/blog/${p.slug}/`}
+              style={{
+                display: 'block',
+                padding: '32px',
+                border: '1px solid var(--border)',
+                borderRadius: 14,
+                background: 'var(--panel)',
+                textDecoration: 'none',
+                color: 'inherit',
+                transition: 'border-color 0.15s, transform 0.15s',
+              }}
+            >
+              <div style={{ display: 'flex', gap: 12, marginBottom: 14 }}>
+                {p.tags.map((t) => (
+                  <span key={t} className="chip" style={{ fontSize: '0.75rem' }}>
+                    {t}
+                  </span>
+                ))}
+              </div>
+              <h2 style={{ margin: 0, fontSize: '1.55rem', lineHeight: 1.25 }}>{p.title}</h2>
+              <p style={{ color: 'var(--text-muted)', marginTop: 10, fontSize: '1.02rem' }}>
+                {p.subtitle}
+              </p>
+              <div style={{ color: 'var(--text-dim)', fontFamily: 'var(--font-mono)', fontSize: '0.85rem', marginTop: 18 }}>
+                {p.date} · {p.readTime}
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

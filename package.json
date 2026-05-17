@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "eslint-config-next": "^15.5.18",
+    "marked": "^18.0.3",
     "next": "^15.5.18",
     "postcss": "^8.5.14",
     "react": "19.0.0",
