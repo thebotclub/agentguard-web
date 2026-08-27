@@ -7,7 +7,10 @@
     "build": "next build",
     "build:preview": "next build && node scripts/rewrite-relative.mjs",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "node --test tests/material-claims.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "check:claims": "node scripts/check-material-claims.mjs"
   },
   "dependencies": {
     "eslint-config-next": "^15.5.18",
