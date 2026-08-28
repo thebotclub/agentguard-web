@@ -20,6 +20,7 @@ const SNAPSHOT_PATH = resolve(
   "governance/claim-registry.snapshot.json",
 );
 const SURFACES_PATH = resolve(WEB_ROOT, "governance/claim-surfaces.json");
+const HEADER_PATH = resolve(WEB_ROOT, "app/_components/site-header.tsx");
 
 function run(cwd, ...args) {
   try {
@@ -170,6 +171,23 @@ describe("standalone material-claim gate", () => {
       readFindings(result).some(
         ({ code }) => code === "P1_WEB_CLAIMS_DIGEST_MISMATCH",
       ),
+    );
+  });
+});
+
+describe("responsive header contract", () => {
+  it("keeps both truthful action destinations while removing the narrow-screen margin", () => {
+    const header = readFileSync(HEADER_PATH, "utf8");
+    assert.match(header, /@media \(max-width: 480px\)/u);
+    assert.match(header, /\.site-header \.brand > span[\s\S]*?display: none/u);
+    assert.match(
+      header,
+      /\.site-header \.nav \.nav-actions[\s\S]*?margin-left: 0/u,
+    );
+    assert.match(header, /href="\/playground"[\s\S]*?Evaluate policy/u);
+    assert.match(
+      header,
+      /href="https:\/\/calendly\.com\/hani-thebot\/30min"[\s\S]*?Book a review/u,
     );
   });
 });

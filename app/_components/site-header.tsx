@@ -39,6 +39,17 @@ export function SiteHeader() {
           </div>
         </nav>
       </div>
+      <style jsx>{`
+        @media (max-width: 480px) {
+          :global(.site-header .brand > span) {
+            display: none;
+          }
+
+          :global(.site-header .nav .nav-actions) {
+            margin-left: 0;
+          }
+        }
+      `}</style>
     </header>
   );
 }
