@@ -1,0 +1,195 @@
+{
+  "schemaVersion": "agentguard.claim-registry-snapshot/v1",
+  "sourceCoreCommit": "cd5c7fa6622fde0eb4d065b0f4770897258a6764",
+  "registryDigest": "sha256:2816ab788512914e14f3eddc2607f0d66519f7cf52796f08ace27cffc050df33",
+  "generatedAt": "2026-08-28T10:10:22+10:00",
+  "claimsDigest": "sha256:dbf59ac2bd3d47e38b57c877b275eed23c46983ad23abd9e49118146cc83f5a4",
+  "claims": [
+    {
+      "id": "public.binary-assets",
+      "owner": "web-maintainers",
+      "meaning": "The public PDF and OpenGraph image bytes are material claim surfaces tracked by exact SHA-256 digest and pending manual content review.",
+      "state": "qualified",
+      "appliesTo": {
+        "artifact": "agentguard-web binary public assets",
+        "version": "sha256-pinned-2026-08-28",
+        "route": "/public-assets",
+        "assuranceTier": "manual-review-pending"
+      },
+      "evidence": [
+        {
+          "kind": "review",
+          "path": "governance/claim-surfaces.core.json",
+          "locator": "sha256 binary entries"
+        }
+      ],
+      "limitations": [
+        "Digest registration does not establish truthful rendered content; PDF and both OG images still require visual review."
+      ],
+      "qualification": "Binary content is unapproved until a dated manual-review outcome replaces pending.",
+      "reviewedAt": "2026-08-28T00:00:00Z",
+      "expiresAt": "2026-09-27T00:00:00Z",
+      "reviewer": "web-maintainers",
+      "surfaceIds": [
+        "web.binary.evidence-pack-pdf",
+        "web.binary.og-jpg",
+        "web.binary.og-png"
+      ]
+    },
+    {
+      "id": "public.compliance-and-assurance",
+      "owner": "security-product",
+      "meaning": "Public regulator, auditor, Big Four, compliance outcome, evidence-pack acceptance, and stronger assurance statements require scoped current evidence.",
+      "state": "qualified",
+      "appliesTo": {
+        "artifact": "public core and website copy",
+        "version": "inventory-2026-08-28",
+        "route": "multiple-public-routes",
+        "assuranceTier": "unproven-public-copy"
+      },
+      "evidence": [
+        {
+          "kind": "review",
+          "path": "governance/claim-surfaces.core.json",
+          "locator": "public.compliance-and-assurance locators"
+        }
+      ],
+      "limitations": [
+        "No current publishable evidence in this inventory proves regulator sign-off, auditor acceptance, compliance outcomes, or universal enforcement."
+      ],
+      "qualification": "These locators are registered as correction-required public copy, not verified outcomes.",
+      "reviewedAt": "2026-08-28T00:00:00Z",
+      "expiresAt": "2026-09-27T00:00:00Z",
+      "reviewer": "security-product",
+      "surfaceIds": [
+        "web.blog.apra-article",
+        "web.compliance.page",
+        "web.home.page",
+        "web.layout.metadata"
+      ]
+    },
+    {
+      "id": "public.exclusivity-and-popularity",
+      "owner": "founder",
+      "meaning": "Only-commercial, most-popular, native, drop-in, and universal integration claims require comparative evidence and exact supported artifacts.",
+      "state": "qualified",
+      "appliesTo": {
+        "artifact": "public integration copy",
+        "version": "inventory-2026-08-28",
+        "route": "/openclaw",
+        "assuranceTier": "compatibility"
+      },
+      "evidence": [
+        {
+          "kind": "review",
+          "path": "governance/claim-surfaces.core.json",
+          "locator": "public.exclusivity-and-popularity locators"
+        }
+      ],
+      "limitations": [
+        "No comparative market study or exact real-runtime proof is registered."
+      ],
+      "qualification": "Current integration evidence supports compatibility source shape only.",
+      "reviewedAt": "2026-08-28T00:00:00Z",
+      "expiresAt": "2026-09-27T00:00:00Z",
+      "reviewer": "phase-1-authority-review",
+      "surfaceIds": [
+        "web.openclaw.page"
+      ]
+    },
+    {
+      "id": "public.pricing-sla-distribution",
+      "owner": "founder",
+      "meaning": "Pricing, paid tiers, feature limits, retention, SLA, on-prem, Docker, Helm, Kubernetes, and air-gap availability require current commercial and artifact evidence.",
+      "state": "qualified",
+      "appliesTo": {
+        "artifact": "public commercial and deployment copy",
+        "version": "inventory-2026-08-28",
+        "route": "/pricing-and-self-hosted",
+        "assuranceTier": null
+      },
+      "evidence": [
+        {
+          "kind": "review",
+          "path": "governance/claim-surfaces.core.json",
+          "locator": "public.pricing-sla-distribution locators"
+        }
+      ],
+      "limitations": [
+        "This phase does not authorize paid-tier promises, SLA publication, or a broad relaunch."
+      ],
+      "qualification": "All commercial and distribution locators remain correction-required until evidence is resolved.",
+      "reviewedAt": "2026-08-28T00:00:00Z",
+      "expiresAt": "2026-09-27T00:00:00Z",
+      "reviewer": "phase-1-authority-review",
+      "surfaceIds": [
+        "web.pricing.page",
+        "web.self-hosted.page"
+      ]
+    },
+    {
+      "id": "public.production-fleet-history",
+      "owner": "founder",
+      "meaning": "Production, GA, customer-zero, company-history, operator, fleet-size, and production-duration claims require dated evidence.",
+      "state": "qualified",
+      "appliesTo": {
+        "artifact": "public website and package copy",
+        "version": "inventory-2026-08-28",
+        "route": "multiple-public-routes",
+        "assuranceTier": "unproven-public-copy"
+      },
+      "evidence": [
+        {
+          "kind": "review",
+          "path": "governance/claim-surfaces.core.json",
+          "locator": "public.production-fleet-history locators"
+        }
+      ],
+      "limitations": [
+        "Repository source shows assertions but contains no current publishable fleet or customer evidence."
+      ],
+      "qualification": "The assertions remain visibly red for evidence resolution or withdrawal.",
+      "reviewedAt": "2026-08-28T00:00:00Z",
+      "expiresAt": "2026-09-27T00:00:00Z",
+      "reviewer": "phase-1-authority-review",
+      "surfaceIds": [
+        "web.about.history",
+        "web.footer.claims"
+      ]
+    },
+    {
+      "id": "public.routes-config-and-examples",
+      "owner": "docs-maintainers",
+      "meaning": "Public routes, install commands, package names, OpenClaw configuration, image names, and code examples must match authoritative shipped artifacts.",
+      "state": "qualified",
+      "appliesTo": {
+        "artifact": "API, docs, workflows, and website examples",
+        "version": "inventory-2026-08-28",
+        "route": "multiple",
+        "assuranceTier": "compatibility"
+      },
+      "evidence": [
+        {
+          "kind": "review",
+          "path": "governance/claim-surfaces.core.json",
+          "locator": "public.routes-config-and-examples locators"
+        }
+      ],
+      "limitations": [
+        "Several examples currently reference fictional packages, stale versions, missing paths, or unsupported config shapes."
+      ],
+      "qualification": "The inventory records current text without endorsing it as supported.",
+      "reviewedAt": "2026-08-28T00:00:00Z",
+      "expiresAt": "2026-09-27T00:00:00Z",
+      "reviewer": "docs-maintainers",
+      "surfaceIds": [
+        "web.blog.index",
+        "web.header.claims",
+        "web.playground.client",
+        "web.playground.page",
+        "web.readme.routes",
+        "web.sitemap.routes"
+      ]
+    }
+  ]
+}

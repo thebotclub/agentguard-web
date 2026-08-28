@@ -1,0 +1,269 @@
+{
+  "schemaVersion": "agentguard.web-claim-surfaces/v1",
+  "inventoryId": "core-and-public-material-surfaces-2026-08-28",
+  "sourceCoreCommit": "cd5c7fa6622fde0eb4d065b0f4770897258a6764",
+  "registryDigest": "sha256:2816ab788512914e14f3eddc2607f0d66519f7cf52796f08ace27cffc050df33",
+  "surfaces": [
+    {
+      "id": "web.readme.routes",
+      "claimId": "public.routes-config-and-examples",
+      "repository": "agentguard-web",
+      "path": "README.md",
+      "kind": "prose",
+      "locator": "environment, route inventory, production build, and deployment instructions",
+      "expectedTextOrValue": "current web repository instructions",
+      "prohibitedPatterns": [
+        "pricing/compliance routes treated as verified product availability"
+      ]
+    },
+    {
+      "id": "web.footer.claims",
+      "claimId": "public.production-fleet-history",
+      "repository": "agentguard-web",
+      "path": "app/_components/site-footer.tsx",
+      "kind": "code",
+      "locator": "positioning, navigation labels, and version footer",
+      "expectedTextOrValue": "production/APRA positioning and v0.1",
+      "prohibitedPatterns": [
+        "production",
+        "compliance pack",
+        "pricing",
+        "v0.1"
+      ]
+    },
+    {
+      "id": "web.header.claims",
+      "claimId": "public.routes-config-and-examples",
+      "repository": "agentguard-web",
+      "path": "app/_components/site-header.tsx",
+      "kind": "code",
+      "locator": "primary navigation labels and destinations",
+      "expectedTextOrValue": "OpenClaw, Playground, Compliance, Pricing, Docs",
+      "prohibitedPatterns": [
+        "links promising unsupported public routes"
+      ]
+    },
+    {
+      "id": "web.about.history",
+      "claimId": "public.production-fleet-history",
+      "repository": "agentguard-web",
+      "path": "app/about/page.tsx",
+      "kind": "code",
+      "locator": "metadata and product/company history, fleet, version, integration, anchoring, and offer copy",
+      "expectedTextOrValue": "current about-page assertions",
+      "prohibitedPatterns": [
+        "18 AI agents",
+        "real production",
+        "Bitcoin-anchored",
+        "50% off"
+      ]
+    },
+    {
+      "id": "web.blog.index",
+      "claimId": "public.routes-config-and-examples",
+      "repository": "agentguard-web",
+      "path": "app/blog/page.tsx",
+      "kind": "code",
+      "locator": "blog metadata and article cards",
+      "expectedTextOrValue": "current blog route copy",
+      "prohibitedPatterns": [
+        "article claim promoted without registration"
+      ]
+    },
+    {
+      "id": "web.blog.apra-article",
+      "claimId": "public.compliance-and-assurance",
+      "repository": "agentguard-web",
+      "path": "app/blog/reading-apra-may-1-letter/page.tsx",
+      "kind": "code",
+      "locator": "metadata, article framing, CTA, evidence, operator, and fleet copy",
+      "expectedTextOrValue": "current APRA article wrapper copy",
+      "prohibitedPatterns": [
+        "CPS 230 evidence on Day 1",
+        "18-agent OpenClaw fleet in production"
+      ]
+    },
+    {
+      "id": "web.compliance.page",
+      "claimId": "public.compliance-and-assurance",
+      "repository": "agentguard-web",
+      "path": "app/compliance/page.tsx",
+      "kind": "code",
+      "locator": "metadata and CPS 230, EU AI Act, ISO 42001, generated-pack and buyer-outcome sections",
+      "expectedTextOrValue": "current compliance-page assertions",
+      "prohibitedPatterns": [
+        "auditor accepts",
+        "Ready for the high-risk obligations",
+        "certification body"
+      ]
+    },
+    {
+      "id": "web.layout.metadata",
+      "claimId": "public.compliance-and-assurance",
+      "repository": "agentguard-web",
+      "path": "app/layout.tsx",
+      "kind": "code",
+      "locator": "default title, description, OpenGraph, Twitter, and image alt",
+      "expectedTextOrValue": "production/regulator/compliance metadata",
+      "prohibitedPatterns": [
+        "your regulator can sign off",
+        "CPS 230 evidence on Day 1"
+      ]
+    },
+    {
+      "id": "web.openclaw.page",
+      "claimId": "public.exclusivity-and-popularity",
+      "repository": "agentguard-web",
+      "path": "app/openclaw/page.tsx",
+      "kind": "code",
+      "locator": "metadata, exclusivity, popularity, operator history, compatibility, install, config, fleet, and pricing copy",
+      "expectedTextOrValue": "current OpenClaw public assertions",
+      "prohibitedPatterns": [
+        "only commercial",
+        "most popular",
+        "18-claw production fleet",
+        "v3.x",
+        "agentguard@0.4.2"
+      ]
+    },
+    {
+      "id": "web.home.page",
+      "claimId": "public.compliance-and-assurance",
+      "repository": "agentguard-web",
+      "path": "app/page.tsx",
+      "kind": "code",
+      "locator": "hero, integrations, assurance, examples, OpenClaw, pricing, and CTA copy",
+      "expectedTextOrValue": "current homepage assertions",
+      "prohibitedPatterns": [
+        "regulator can sign off",
+        "Big-Four auditor",
+        "only commercial",
+        "MIT-licensed SDK",
+        "Bitcoin-anchored"
+      ]
+    },
+    {
+      "id": "web.playground.client",
+      "claimId": "public.routes-config-and-examples",
+      "repository": "agentguard-web",
+      "path": "app/playground/PlaygroundClient.tsx",
+      "kind": "code",
+      "locator": "live API URL, scenario, decision, and result rendering",
+      "expectedTextOrValue": "current interactive client behavior",
+      "prohibitedPatterns": [
+        "mock or unavailable result presented as live proof"
+      ]
+    },
+    {
+      "id": "web.playground.page",
+      "claimId": "public.routes-config-and-examples",
+      "repository": "agentguard-web",
+      "path": "app/playground/page.tsx",
+      "kind": "code",
+      "locator": "live demo metadata and no-signup assertions",
+      "expectedTextOrValue": "current playground metadata",
+      "prohibitedPatterns": [
+        "every tool call runs through the live policy engine without runtime evidence"
+      ]
+    },
+    {
+      "id": "web.pricing.page",
+      "claimId": "public.pricing-sla-distribution",
+      "repository": "agentguard-web",
+      "path": "app/pricing/page.tsx",
+      "kind": "code",
+      "locator": "metadata, tier prices, limits, retention, features, SLA, deployment, and offer copy",
+      "expectedTextOrValue": "current public pricing matrix",
+      "prohibitedPatterns": [
+        "$499",
+        "$2,500",
+        "99.95%",
+        "MIT-licensed SDK",
+        "paid-tier promise"
+      ]
+    },
+    {
+      "id": "web.self-hosted.page",
+      "claimId": "public.pricing-sla-distribution",
+      "repository": "agentguard-web",
+      "path": "app/self-hosted/page.tsx",
+      "kind": "code",
+      "locator": "metadata, Docker, Helm, Kubernetes, image, chart, VPC, and air-gap instructions",
+      "expectedTextOrValue": "current self-hosted assertions",
+      "prohibitedPatterns": [
+        "ghcr.io/thebotclub/agentguard:0.4",
+        "charts.agentguard.tech",
+        "air-gapped"
+      ]
+    },
+    {
+      "id": "web.sitemap.routes",
+      "claimId": "public.routes-config-and-examples",
+      "repository": "agentguard-web",
+      "path": "public/sitemap.xml",
+      "kind": "structured-xml",
+      "locator": "all url.loc entries",
+      "expectedTextOrValue": "current public route list without /about or /trust",
+      "prohibitedPatterns": [
+        "unsupported route presented as current"
+      ]
+    },
+    {
+      "id": "web.binary.evidence-pack-pdf",
+      "claimId": "public.binary-assets",
+      "repository": "agentguard-web",
+      "path": "public/samples/cps230-evidence-pack-sample.pdf",
+      "kind": "pdf",
+      "locator": "entire binary",
+      "expectedTextOrValue": "manual rendered-content review pending",
+      "prohibitedPatterns": [
+        "unreviewed compliance or acceptance assertion"
+      ],
+      "digest": "sha256:3c60ccfe94481fe3ef97a06eb7c8c0f818b55a85569f96cf729f846380ab691a",
+      "manualReview": {
+        "reviewer": "founder-technical-review",
+        "reviewedAt": "2026-08-28T00:00:00Z",
+        "outcome": "pending",
+        "notes": "Digest registered; rendered visual/content review is not complete."
+      }
+    },
+    {
+      "id": "web.binary.og-jpg",
+      "claimId": "public.binary-assets",
+      "repository": "agentguard-web",
+      "path": "public/og.jpg",
+      "kind": "image",
+      "locator": "entire binary",
+      "expectedTextOrValue": "manual visual review pending",
+      "prohibitedPatterns": [
+        "unreviewed assurance or production assertion"
+      ],
+      "digest": "sha256:cf54b19cc6699f7e8ba159c2b90165da9fdb2ece6312ef67268002098f24f785",
+      "manualReview": {
+        "reviewer": "founder-technical-review",
+        "reviewedAt": "2026-08-28T00:00:00Z",
+        "outcome": "pending",
+        "notes": "Digest registered; visual text/content review is not complete."
+      }
+    },
+    {
+      "id": "web.binary.og-png",
+      "claimId": "public.binary-assets",
+      "repository": "agentguard-web",
+      "path": "public/og.png",
+      "kind": "image",
+      "locator": "entire binary",
+      "expectedTextOrValue": "manual visual review pending",
+      "prohibitedPatterns": [
+        "unreviewed assurance or production assertion"
+      ],
+      "digest": "sha256:030bbb107d4df69e7279baab7572235e1737808da35f4108cc89f242142839be",
+      "manualReview": {
+        "reviewer": "founder-technical-review",
+        "reviewedAt": "2026-08-28T00:00:00Z",
+        "outcome": "pending",
+        "notes": "Digest registered; visual text/content review is not complete."
+      }
+    }
+  ]
+}
