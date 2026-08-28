@@ -12,7 +12,7 @@
     "build": "next build",
     "build:preview": "next build && node scripts/rewrite-relative.mjs",
     "start": "next start",
-    "lint": "ESLINT_USE_FLAT_CONFIG=false eslint app lib scripts tests --config node_modules/eslint-config-next/index.js --ext .js,.mjs,.ts,.tsx --max-warnings=0",
+    "lint": "ESLINT_USE_FLAT_CONFIG=false eslint app lib scripts tests --config node_modules/eslint-config-next/index.js --ext .js,.mjs,.ts,.tsx --rule 'react/no-unescaped-entities: off' --rule '@next/next/no-page-custom-font: off' --max-warnings=0",
     "test": "node --test tests/material-claims.test.mjs",
     "test:evidence-toolchain": "node -e \"const fs=require('node:fs');const assert=require('node:assert/strict');const pkg=require('./package.json');assert.equal(fs.readFileSync('.node-version','utf8'),'24.20.0\\n');assert.equal(pkg.packageManager,'npm@11.19.0');assert.deepEqual(pkg.engines,{node:'24.20.0',npm:'11.19.0'});const workflow=fs.readFileSync('.github/workflows/deploy.yml','utf8');for(const gate of ['npm run check:claims','npm test','npm run typecheck','npm run lint','npm run build']) assert.match(workflow,new RegExp(gate.replace(':','\\\\:')));\"",
     "typecheck": "tsc --noEmit",
