@@ -3,14 +3,14 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'Notes on AI agent governance, APRA CPS 230, and the EU AI Act — from an Australian fintech operator running an OpenClaw fleet in production.',
+  description: 'Notes on agent action control, public governance sources, and the evidence needed before making stronger claims.',
 };
 
 const posts = [
   {
     slug: 'reading-apra-may-1-letter',
     title: "Reading APRA's May 1 letter as an Australian fintech CTO",
-    subtitle: 'What you need to ship before 2 August 2026.',
+    subtitle: 'A reading of the public letter, not compliance advice.',
     date: '15 May 2026',
     readTime: '12 min',
     tags: ['APRA', 'CPS 230', 'EU AI Act'],
@@ -22,10 +22,10 @@ export default function BlogPage() {
     <section className="section">
       <div className="container" style={{ maxWidth: 880 }}>
         <span className="eyebrow plain">Blog</span>
-        <h1 style={{ marginTop: 14 }}>Notes from production.</h1>
+        <h1 style={{ marginTop: 14 }}>Notes on agent control.</h1>
         <p className="lede" style={{ marginTop: 14, maxWidth: '52ch' }}>
-          What we learn running an 18-agent OpenClaw fleet, talking to AU
-          fintech CROs, and reading the regulatory tea leaves.
+          Technical notes on policy boundaries, compatibility paths, and public
+          governance sources. Product claims stay separate from commentary.
         </p>
 
         <div style={{ marginTop: 48, display: 'flex', flexDirection: 'column', gap: 24 }}>

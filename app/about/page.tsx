@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Who builds AgentGuard, why we built it, and where it sits in the AU/APAC AI governance landscape.',
+  description: 'Who builds AgentGuard, what is available today, and which local enforcement proof is still pending.',
 };
 
 export default function AboutPage() {
@@ -11,11 +11,12 @@ export default function AboutPage() {
     <section className="section">
       <div className="container" style={{ maxWidth: 780 }}>
         <span className="eyebrow plain">About</span>
-        <h1 style={{ marginTop: 14 }}>Built by operators, not analysts.</h1>
+        <h1 style={{ marginTop: 14 }}>Built with the limits visible.</h1>
         <p className="lede" style={{ marginTop: 14 }}>
-          AgentGuard is the runtime governance layer we needed for our own
-          OpenClaw fleet, then turned into a product because every
-          APRA-regulated team we showed it to had the same problem.
+          AgentGuard is developing a private, last-mile policy boundary for
+          consequential agent actions. The current packages expose local
+          contracts and compatibility telemetry; the stronger broker topology
+          is still being tested.
         </p>
 
         <div className="prose" style={{ marginTop: 48 }}>
@@ -23,57 +24,53 @@ export default function AboutPage() {
           <p>
             AgentGuard is built by{' '}
             <strong>The Bot Club Pty Ltd</strong> — an Australian company
-            (ABN 99 695 980 226) that operates a production fleet of 18 AI
-            agents on the OpenClaw framework, across three Mac minis in
-            Sydney.
+            (ABN 99 695 980 226) developing open source for agent policy
+            evaluation, local contracts, and explicit assurance boundaries.
           </p>
           <p>
             The Bot Club ships{' '}
             <a href="https://tribunal.dev">Tribunal</a> for coding-agent
-            governance (Claude Code, Cursor, Copilot, Codex), AgentGuard for
-            production-agent governance (OpenClaw, LangChain, CrewAI, OpenAI
-            Assistants, AutoGen, MCP), and{' '}
+            governance, AgentGuard for local agent action-control research and
+            compatibility paths, and{' '}
             <a href="https://evidencely.ai">Evidencely</a> for AI-powered
             accounting automation.
           </p>
 
           <h2>Why this exists</h2>
           <p>
-            In late 2025 we put our first non-trivial agent into production
-            inside our accounting workflow and immediately hit the same wall
-            every AU fintech team is hitting: we had no runtime control plane,
-            no policy enforcement, no tamper-evident audit trail, and no
-            evidence we could hand to a regulator.
+            Agent actions become difficult to control when the calling process
+            also retains the raw tool, credential, or socket. AgentGuard exists
+            to test a narrower design: the agent sees a mediated tool while a
+            separately owned local broker alone holds the raw capability.
           </p>
           <p>
-            We looked at the funded incumbents (Lakera, Prompt Security,
-            Lasso, Cisco AI Defense). Every one of them was American or
-            European, sold top-down to F500s, and had no APRA mappings, no AU
-            data residency, no support model that worked across timezones.
+            The project does not claim broad market coverage or an exclusive
+            integration position. It is concentrating on one reproducible
+            OpenClaw-to-MCP-stdio path before expanding the scope.
           </p>
           <p>
             On 1 May 2026,{' '}
             <a href="https://www.apra.gov.au/apra-letter-to-industry-on-artificial-intelligence-ai">
               APRA wrote to industry
             </a>{' '}
-            confirming the regulator has the same view we do — AU governance
-            is failing to keep pace. CPS 230 has been binding since July
-            2025. The EU AI Act enforcement window opens 2 August 2026.
+            describing observed gaps in AI governance and risk management.
+            That public letter is context for operators; it is not evidence that
+            AgentGuard satisfies a standard or will produce a compliance outcome.
           </p>
           <p>
-            We built AgentGuard for the buyer that gap leaves stranded: the
-            CISO and Head of Risk at an AU mid-market neobank, BNPL,
-            mortgage tech or super fund, who can't ship the next AI feature
-            until they have an answer the board accepts.
+            The current reader is a technical founder or operator evaluating
+            whether one private, local action boundary can be made deterministic,
+            non-bypassable within its stated host limits, and independently
+            reproducible.
           </p>
 
           <h2>Where we are</h2>
           <ul>
             <li>
               <strong>v0.11.0</strong> — runtime engine, hash-chained audit
-              log, kill switch, evidence-pack generator (CPS 230, EU AI Act,
-              ISO 42001, SOC 2 mappings), native OpenClaw / LangChain /
-              CrewAI / OpenAI / AutoGen / MCP integrations.
+              source, canonical TypeScript v1 contracts, and compatibility
+              adapters. The OpenClaw hook and MCP HTTP/in-process paths are
+              telemetry only, not executor-owned firewall proof.
             </li>
             <li>
               Live SDKs on{' '}
@@ -89,31 +86,28 @@ export default function AboutPage() {
               .
             </li>
             <li>
-              Customer zero: The Bot Club's own 18-agent OpenClaw fleet runs
-              under AgentGuard from week 5. Real production, real evidence
-              pack, signed and Bitcoin-anchored.
+              Firewall-proof status: pending. The intended MCP-stdio broker must
+              hold the raw capability outside OpenClaw and pass the registered
+              bypass probes before a stronger claim is available.
             </li>
           </ul>
 
           <h2>Working with us</h2>
           <p>
-            We're taking on a small number of design partners through 2026 —
-            three AU regulated fintechs at 50% off the Compliance tier for 12
-            months, in exchange for a case study and intros to peers. If
-            you're racing the August deadline,{' '}
+            Current conversations are technical evaluations, not paid offers,
+            service commitments, or readiness assessments. If you want to inspect
+            the narrow action path and its limitations,{' '}
             <a href="https://calendly.com/hani-thebot/30min">
-              book a 30-minute CPS 230 readiness review
+              book a 30-minute technical evaluation
             </a>
-            . We'll walk through your agent inventory against the standard,
-            flag the gaps, and tell you honestly whether AgentGuard fits.
+            . We&rsquo;ll start with the exact capability, caller identity, bypass
+            paths, and evidence you can verify.
           </p>
 
           <h2>Who's writing this</h2>
           <p>
-            <strong>Hani Koshaji</strong> — founder, The Bot Club. Twenty
-            years in payments, accounting, and SaaS infrastructure across the
-            UK, GCC and Australia. Most recently building Evidencely
-            (AI-powered accounting). Reach me at{' '}
+            <strong>Hani Koshaji</strong> — founder, The Bot Club, and maintainer
+            of the AgentGuard project. Reach me at{' '}
             <a href="mailto:hani@thebot.club">hani@thebot.club</a> or on{' '}
             <a href="https://www.linkedin.com/in/hanikoshaji">LinkedIn</a>.
           </p>

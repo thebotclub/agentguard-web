@@ -29,7 +29,7 @@ const DECISION_LABEL: Record<Decision, string> = {
   allow: 'allow',
   block: 'block',
   monitor: 'monitor',
-  require_approval: 'approval',
+  require_approval: 'approval required',
 };
 
 function DecisionBadge({ decision }: { decision: LogRow['decision'] }) {
@@ -160,13 +160,14 @@ export default function PlaygroundPage() {
       {/* Hero */}
       <section className="hero" style={{ paddingTop: 72, paddingBottom: 32 }}>
         <div className="container">
-          <span className="eyebrow">LIVE DEMO · NO SIGN-UP</span>
+          <span className="eyebrow">PUBLIC POLICY EVALUATOR</span>
           <h1 className="hero-title" style={{ fontSize: 'clamp(2rem, 4.4vw, 3.2rem)' }}>
-            Watch AgentGuard block a rogue agent. Live.
+            Replay a proposed action against demo policy.
           </h1>
           <p className="hero-sub">
-            Pick a scenario, hit Run, see the decision. Every tool call below goes
-            through the same policy engine your production agents will.
+            Pick a scenario, run it, and inspect the API decision. The evaluator
+            does not execute the listed tools and is not evidence of an
+            executor-owned broker boundary.
           </p>
         </div>
       </section>
@@ -186,7 +187,7 @@ export default function PlaygroundPage() {
               <div className="pg-section-head">
                 <span className="eyebrow plain">01 · Scenario</span>
                 <h2 style={{ marginTop: 10, fontSize: '1.4rem' }}>
-                  Pick an attack to replay
+                  Pick a proposal to replay
                 </h2>
               </div>
 
@@ -245,7 +246,7 @@ export default function PlaygroundPage() {
                       {running ? 'Running…' : `Run scenario · ${active.actions.length} calls`}
                     </button>
                     <span className="pg-foot-note">
-                      This calls api.agentguard.tech directly. No data is stored against your IP.
+                      This calls the public playground API. It evaluates the proposal but does not execute the tool.
                     </span>
                   </div>
                 </div>
@@ -255,7 +256,7 @@ export default function PlaygroundPage() {
             {/* RIGHT: results */}
             <div className="pg-col">
               <div className="pg-section-head">
-                <span className="eyebrow plain">03 · Live audit trail</span>
+                <span className="eyebrow plain">03 · API decision log</span>
                 <h2 style={{ marginTop: 10, fontSize: '1.4rem' }}>
                   Policy decisions, in order
                 </h2>
@@ -264,7 +265,7 @@ export default function PlaygroundPage() {
               <div className="pg-audit">
                 {log.length === 0 && (
                   <div className="pg-empty">
-                    Pick a scenario and hit <strong>Run</strong>. Decisions will stream in here.
+                    Pick a scenario and hit <strong>Run</strong>. API decisions will appear here.
                   </div>
                 )}
                 {log.map((row, i) => (
@@ -299,7 +300,7 @@ export default function PlaygroundPage() {
                   <div>
                     <strong>{summary.allowed}</strong> allowed ·{' '}
                     <strong>{summary.blocked}</strong> blocked ·{' '}
-                    <strong>{summary.escalated}</strong> escalated ·{' '}
+                    <strong>{summary.escalated}</strong> approval required ·{' '}
                     <strong>{summary.monitored}</strong> monitored
                   </div>
                   {sessionId && (
@@ -345,9 +346,9 @@ export default function PlaygroundPage() {
         <div className="container">
           <div className="grid-3">
             <div className="card">
-              <div className="index">A · Install the SDK</div>
-              <h3>Like what you see?</h3>
-              <p>Drop AgentGuard in front of any agent in 60 seconds.</p>
+              <div className="index">A · Inspect the SDKs</div>
+              <h3>Use the exact package names</h3>
+              <p>The TypeScript and Python packages are independently versioned compatibility artifacts.</p>
               <div style={{ marginTop: 14, display: 'flex', flexDirection: 'column', gap: 8 }}>
                 <span className="install">
                   <span className="dollar">$</span> npm install @the-bot-club/agentguard
@@ -358,22 +359,22 @@ export default function PlaygroundPage() {
               </div>
             </div>
             <div className="card">
-              <div className="index">B · Your own policies</div>
-              <h3>Want this against your own policies?</h3>
-              <p>30 minutes with us — bring your tools, leave with a policy pack tailored to your risk register.</p>
+              <div className="index">B · Technical evaluation</div>
+              <h3>Need to test one exact action?</h3>
+              <p>Bring the capability, caller identity, and bypass paths. Keep the discussion narrow and evidence-led.</p>
               <div style={{ marginTop: 14 }}>
                 <a className="btn btn-primary btn-sm" href="https://calendly.com/hani-thebot/30min">
-                  Book a review
+                  Discuss a technical evaluation
                 </a>
               </div>
             </div>
             <div className="card">
-              <div className="index">C · Evidence pack</div>
-              <h3>See the compliance evidence pack</h3>
-              <p>CPS 230, EU AI Act and ISO 42001 mappings — pre-built and ready for the regulator.</p>
+              <div className="index">C · Assurance limits</div>
+              <h3>Read what is not proven</h3>
+              <p>No production, compliance, fleet, or non-bypassability outcome is implied by this evaluator.</p>
               <div style={{ marginTop: 14 }}>
                 <Link className="btn btn-secondary btn-sm" href="/compliance">
-                  Compliance pack
+                  Assurance status
                 </Link>
               </div>
             </div>
