@@ -6,15 +6,15 @@ import { SiteFooter } from './_components/site-footer';
 export const metadata: Metadata = {
   metadataBase: new URL('https://agentguard.tech'),
   title: {
-    default: 'AgentGuard — Production AI agents your regulator can sign off',
+    default: 'AgentGuard — Local policy evaluation for AI agent actions',
     template: '%s · AgentGuard',
   },
   description:
-    'Runtime governance for production AI agents. CPS 230 evidence on Day 1, EU AI Act and ISO 42001 mappings included. Built for APRA-regulated AU/APAC financial services.',
+    'AgentGuard provides local policy contracts and compatibility telemetry for AI agent actions. Executor-owned firewall proof is still in progress.',
   openGraph: {
     title: 'AgentGuard',
     description:
-      'Runtime governance for production AI agents — CPS 230, EU AI Act, ISO 42001.',
+      'Local policy contracts and compatibility telemetry for AI agent actions, with explicit assurance limits.',
     url: 'https://agentguard.tech',
     siteName: 'AgentGuard',
     type: 'website',
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
         url: '/og.png',
         width: 1200,
         height: 630,
-        alt: 'AgentGuard — Production AI agents your regulator can sign off',
+        alt: 'AgentGuard — local AI agent policy evaluation',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AgentGuard',
-    description: 'Runtime governance for production AI agents.',
+    description: 'Local policy evaluation and compatibility telemetry for AI agent actions.',
     images: ['/og.png'],
   },
   icons: { icon: '/favicon.svg' },

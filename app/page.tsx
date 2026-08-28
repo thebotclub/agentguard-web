@@ -6,23 +6,24 @@ export default function Home() {
       {/* Hero */}
       <section className="hero">
         <div className="container">
-          <span className="eyebrow">v0.1 · runtime governance for production AI agents</span>
+          <span className="eyebrow">Local agent action control · proof in progress</span>
           <h1 className="hero-title">
-            Production AI agents
+            Put policy before
             <br />
-            your regulator can sign off.
+            an agent action.
           </h1>
           <p className="hero-sub">
-            Runtime governance for production AI agents. CPS 230 evidence on Day 1,
-            EU AI Act and ISO 42001 mappings included. Built for APRA-regulated
-            financial services in Australia and APAC.
+            AgentGuard is building a private, last-mile policy boundary for
+            consequential agent actions. The current packages provide policy
+            evaluation and compatibility telemetry; executor-owned firewall proof
+            remains pending.
           </p>
           <div className="cta-row">
             <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
-              Book a CPS 230 readiness review
+              Discuss a technical evaluation
             </a>
             <Link className="btn btn-secondary" href="/playground">
-              Try the demo
+              Inspect policy decisions
             </Link>
           </div>
           <div className="hero-meta">
@@ -32,18 +33,18 @@ export default function Home() {
             </div>
             <div className="chip-row" style={{ justifyContent: 'center', maxWidth: 760 }}>
               <span style={{ color: 'var(--text-dim)', fontFamily: 'var(--font-mono)', fontSize: '0.78rem', marginRight: 6, alignSelf: 'center' }}>
-                Governs:
+                Current artifacts:
               </span>
               {[
-                'openclaw',
-                'langchain',
-                'crewai',
-                'openai-assistants',
-                'autogen',
-                'langgraph',
-                'mcp',
-                'vercel-ai',
-                'express / fastapi',
+                'typescript sdk',
+                'python compatibility sdk',
+                'openclaw hook',
+                'mcp http adapter',
+                'mcp in-process adapter',
+                'local v1 contracts',
+                'express api',
+                'cli source',
+                'self-hosting references',
               ].map((c) => (
                 <span key={c} className="chip">{c}</span>
               ))}
@@ -57,40 +58,39 @@ export default function Home() {
         <div className="container">
           <div style={{ marginBottom: 36 }}>
             <span className="eyebrow plain">Why AgentGuard</span>
-            <h2 style={{ marginTop: 14 }}>The governance layer your CISO already asked you to build.</h2>
+            <h2 style={{ marginTop: 14 }}>A narrow control boundary, stated plainly.</h2>
             <p className="lede" style={{ marginTop: 14 }}>
-              Three things every APRA-regulated team needs the day they put a non-trivial AI agent into production.
+              AgentGuard separates what exists today from the stronger proof the project is still working to earn.
             </p>
           </div>
           <div className="grid-3">
             <div className="card">
               <div className="index">/01</div>
-              <h3>Built for APRA CPS 230 + EU AI Act</h3>
+              <h3>Local policy contracts</h3>
               <p>
-                Controls mapped directly to CPS 230 operational risk, EU AI Act
-                high-risk obligations, and ISO 42001. Every event in the log
-                carries the framework reference. Your auditor opens one PDF and
-                stops asking questions.
+                The TypeScript line contains strict v1 contracts for requests,
+                decisions, permits, outcomes, and evidence. They are independently
+                versioned from the Python compatibility package.
               </p>
             </div>
             <div className="card">
               <div className="index">/02</div>
-              <h3>Runtime enforcement, not prompt-scanning</h3>
+              <h3>Compatibility is not a firewall</h3>
               <p>
-                AgentGuard sits in the agent runtime &mdash; it intercepts tool
-                calls, model outputs, and dollar-spend before they happen. Policies
-                are YAML, not regex on prompts. Block actions, require human
-                approval, or escalate to a second agent.
+                The shipped OpenClaw hook and MCP HTTP/in-process adapters can
+                observe policy decisions and return a block result. They can also
+                be disabled or bypassed, so they are telemetry, not capability
+                separation.
               </p>
             </div>
             <div className="card">
               <div className="index">/03</div>
-              <h3>Audit evidence your board accepts</h3>
+              <h3>Proof before stronger claims</h3>
               <p>
-                Every decision your agents make produces a signed,
-                Bitcoin-anchored audit record. The compliance pack assembles them
-                into a single PDF with framework mappings, control owners and
-                statistical sampling &mdash; the format your Big-Four auditor expects.
+                The intended firewall boundary is an executor-owned local MCP-stdio
+                broker that alone retains the raw capability. That topology is not
+                yet shipped or proven, so no production, compliance, or fleet
+                outcome is claimed here.
               </p>
             </div>
           </div>
@@ -102,28 +102,28 @@ export default function Home() {
         <div className="container">
           <div style={{ marginBottom: 36 }}>
             <span className="eyebrow plain">How it works</span>
-            <h2 style={{ marginTop: 14 }}>Four steps from <code className="mono">pip install</code> to audit-ready.</h2>
+            <h2 style={{ marginTop: 14 }}>Four facts you can verify in the <code className="mono">source</code>.</h2>
           </div>
           <div className="grid-4">
             <div className="card">
               <div className="index">step 01</div>
-              <h3>Install</h3>
-              <p>One line in Python or Node. Works locally and behind your firewall &mdash; no SaaS dependency for runtime.</p>
+              <h3>Choose a package</h3>
+              <p>The TypeScript and Python packages have independent release lines and different assurance scope.</p>
               <pre className="code-block" style={{ marginTop: 14 }}>pip install agentguard-tech</pre>
             </div>
             <div className="card">
               <div className="index">step 02</div>
-              <h3>Wire your agent</h3>
-              <p>One decorator or middleware per framework. We ship adapters for OpenClaw, LangChain, CrewAI, AutoGen, OpenAI Assistants, and MCP.</p>
+              <h3>Evaluate a proposal</h3>
+              <p>The compatibility SDKs can send a proposed action to the policy API and return its decision.</p>
               <pre className="code-block" style={{ marginTop: 14 }}>{`from agentguard import guard
 
-@guard(policy="cps230")
+@guard(policy="local-policy")
 def run_agent(...): ...`}</pre>
             </div>
             <div className="card">
               <div className="index">step 03</div>
-              <h3>Author policy YAML</h3>
-              <p>Declarative policies covering tool whitelists, dollar caps, PII egress, human-in-the-loop gates, and after-hours rules.</p>
+              <h3>Keep deferred states blocked</h3>
+              <p>V1 can allow or block. A require-approval decision blocks dispatch; human approval is deferred.</p>
               <pre className="code-block" style={{ marginTop: 14 }}>{`limits:
   daily_spend_aud: 500
   tools_allow:
@@ -134,9 +134,9 @@ require_approval:
             </div>
             <div className="card">
               <div className="index">step 04</div>
-              <h3>Generate evidence</h3>
-              <p>One command builds the signed compliance pack &mdash; the same PDF format APRA-regulated boards already accept.</p>
-              <pre className="code-block" style={{ marginTop: 14 }}>agentguard evidence build --framework cps230</pre>
+              <h3>Read the limitations</h3>
+              <p>The repository documents which adapters are compatibility-only and which broker proof is still missing.</p>
+              <pre className="code-block" style={{ marginTop: 14 }}>github.com/thebotclub/agentguard-core</pre>
             </div>
           </div>
         </div>
@@ -147,19 +147,19 @@ require_approval:
         <div className="container">
           <div className="split">
             <div>
-              <span className="eyebrow amber">OpenClaw · the fleet problem</span>
-              <h2 style={{ marginTop: 14 }}>Govern OpenClaw fleets natively.</h2>
+              <span className="eyebrow amber">OpenClaw · compatibility path</span>
+              <h2 style={{ marginTop: 14 }}>Observe hook events. Keep the limit visible.</h2>
               <p className="lede" style={{ marginTop: 14 }}>
-                OpenClaw is the most popular open agent framework in the world.
-                Most of them run unmonitored. AgentGuard is the only commercial
-                governance product that natively manages OpenClaw &mdash; written by
-                an operator who runs an 18-agent OpenClaw fleet in production.
+                The current TypeScript package includes a structural OpenClaw
+                before_tool_call HTTP hook. It can
+                return a block result, but it does not own the raw tool capability
+                and is not firewall proof.
               </p>
               <ul style={{ color: 'var(--text-muted)', lineHeight: 1.8, marginTop: 18, paddingLeft: 18 }}>
-                <li>Drop-in plugin &mdash; no fork, no patches.</li>
-                <li>Per-claw policy: dollar caps, tool whitelists, human approvals.</li>
-                <li>Fleet view: which claws are live, what they're doing, what they cost.</li>
-                <li>Killswitch and rollback on policy breach.</li>
+                <li>Current artifact: TypeScript compatibility hook.</li>
+                <li>Strict mode can return a block when evaluation fails.</li>
+                <li>Permissive mode allows on evaluation error.</li>
+                <li>Executor-owned MCP-stdio broker proof is pending.</li>
               </ul>
               <div style={{ marginTop: 24, display: 'flex', gap: 10 }}>
                 <Link href="/openclaw" className="btn btn-secondary btn-sm">Read more →</Link>
@@ -171,21 +171,26 @@ require_approval:
                 <span className="dot" /><span className="dot" /><span className="dot" />
                 <span style={{ marginLeft: 8 }}>~/fleet/openclaw.config.yaml</span>
               </div>
-              <pre>{`# Drop into your existing OpenClaw config
-plugins:
-  - name: agentguard
-    package: "@the-bot-club/agentguard"
-    options:
-      policy: ./policies/cps230.yaml
-      evidence: ./evidence/
-      anchor: true        # Bitcoin-anchor audit roots
-      fleet_id: bnb-prod  # tag for fleet view
-      tools:
-        allow: [search, read_file, http_get]
-        require_approval: [send_email, transfer]
-      limits:
-        daily_spend_aud: 500
-        max_parallel_claws: 12`}</pre>
+              <pre>{`{
+  "plugins": {
+    "entries": {
+      "agentguard": {
+        "enabled": true,
+        "config": {
+          "apiKey": "\${AGENTGUARD_API_KEY}",
+          "agentId": "my-agent",
+          "strict": true
+        }
+      }
+    },
+    "installs": {
+      "agentguard": {
+        "source": "npm",
+        "spec": "@the-bot-club/agentguard@0.11.0"
+      }
+    }
+  }
+}`}</pre>
             </div>
           </div>
         </div>
@@ -195,23 +200,22 @@ plugins:
       <section className="section">
         <div className="container">
           <div className="pair-card">
-            <span className="eyebrow plain">The Tribunal pair</span>
+            <span className="eyebrow plain">Independent projects</span>
             <h2 style={{ marginTop: 14, maxWidth: '24ch' }}>
               One event spec. One policy DSL. One audit log.
             </h2>
             <p className="lede" style={{ marginTop: 14 }}>
-              AgentGuard governs your <strong style={{ color: 'var(--text)' }}>production agents</strong>.
-              {' '}Tribunal governs your <strong style={{ color: 'var(--text)' }}>coding agents</strong>. Together
-              they're one spec across every agent your company runs &mdash; from the
-              CrewAI worker handling claims, to the Claude Code session shipping
-              the patch that powers it.
+              AgentGuard and Tribunal are <strong style={{ color: 'var(--text)' }}>separate projects</strong> with
+              {' '}<strong style={{ color: 'var(--text)' }}>separate release lines</strong>. AgentGuard currently focuses
+              on policy contracts and compatibility paths for runtime actions;
+              the shared branding does not imply shared proof or complete agent coverage.
             </p>
             <div style={{ marginTop: 24, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
               <a className="btn btn-secondary btn-sm" href="https://tribunal.dev">
                 tribunal.dev →
               </a>
               <Link className="btn btn-ghost btn-sm" href="/compliance">
-                How the evidence joins up →
+                Read the assurance limits →
               </Link>
             </div>
           </div>
@@ -223,48 +227,48 @@ plugins:
         <div className="container">
           <div style={{ marginBottom: 36, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: 16 }}>
             <div>
-              <span className="eyebrow plain">Pricing</span>
-              <h2 style={{ marginTop: 14 }}>Free to start. Flat-fee to ship compliant.</h2>
+              <span className="eyebrow plain">Availability</span>
+              <h2 style={{ marginTop: 14 }}>Packages are public. Paid terms are not.</h2>
             </div>
-            <Link href="/pricing" className="btn btn-ghost btn-sm">See full comparison →</Link>
+            <Link href="/pricing" className="btn btn-ghost btn-sm">Read availability status →</Link>
           </div>
           <div className="price-grid">
             <div className="price-card">
-              <h3>Free</h3>
-              <div className="amount">$0 <small>/ forever</small></div>
+              <h3>TypeScript</h3>
+              <div className="amount">0.11.0 <small>/ TypeScript</small></div>
               <ul>
-                <li>1 agent, 7-day retention</li>
-                <li>Local audit log</li>
-                <li>Community Discord</li>
-                <li>MIT-licensed SDK</li>
+                <li>Published package manifest</li>
+                <li>Canonical local v1 contracts</li>
+                <li>OpenClaw compatibility hook</li>
+                <li>BSL 1.1 source licence</li>
               </ul>
             </div>
             <div className="price-card featured">
-              <h3>Team</h3>
-              <div className="amount">$499 <small>AUD / month</small></div>
+              <h3>Python</h3>
+              <div className="amount">0.11.1 <small>/ Python</small></div>
               <ul>
-                <li>Up to 25 agents</li>
-                <li>90-day retention</li>
-                <li>SSO (Google, Microsoft)</li>
-                <li>Signed audit roots</li>
-                <li>Email support</li>
+                <li>Independent compatibility release</li>
+                <li>HTTP policy evaluation</li>
+                <li>No TypeScript v1 parity claim</li>
+                <li>BSL 1.1 source licence</li>
+                <li>Published package manifest</li>
               </ul>
             </div>
             <div className="price-card">
-              <h3>Compliance</h3>
-              <div className="amount">$2,500 <small>AUD / month flat</small></div>
+              <h3>Firewall proof</h3>
+              <div className="amount">Pending <small>/ topology gate</small></div>
               <ul>
-                <li>Unlimited agents</li>
-                <li>1-year retention + cold archive</li>
-                <li>CPS 230 evidence pack</li>
-                <li>EU AI Act + ISO 42001 mappings</li>
-                <li>Bitcoin-anchored audit roots</li>
-                <li>Quarterly readiness review</li>
+                <li>Executor-owned broker required</li>
+                <li>Raw capability held outside OpenClaw</li>
+                <li>Topology evidence not yet complete</li>
+                <li>No production assurance claim</li>
+                <li>Failure probes are planned</li>
+                <li>Host-compromise limits stay explicit</li>
               </ul>
             </div>
           </div>
           <p style={{ color: 'var(--text-dim)', fontSize: '0.92rem', marginTop: 20, fontFamily: 'var(--font-mono)' }}>
-            Enterprise &mdash; on-prem, SLA, dedicated SE. <Link href="/pricing" style={{ color: 'var(--teal)' }}>Talk to us →</Link>
+            No public prices, paid tiers, retention promises, or SLA are offered. <Link href="/pricing" style={{ color: 'var(--teal)' }}>Read why →</Link>
           </p>
         </div>
       </section>
@@ -273,14 +277,14 @@ plugins:
       <section className="section tight" style={{ textAlign: 'center' }}>
         <div className="container">
           <h2 style={{ maxWidth: '24ch', margin: '0 auto' }}>
-            Ship the agent. Pass the audit.
+            Evaluate the narrow path on its evidence.
           </h2>
           <div className="cta-row" style={{ marginTop: 24 }}>
             <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
-              Book a CPS 230 readiness review
+              Discuss a technical evaluation
             </a>
             <Link className="btn btn-secondary" href="/playground">
-              Try the demo
+              Inspect policy decisions
             </Link>
           </div>
         </div>

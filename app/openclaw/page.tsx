@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'OpenClaw fleet governance',
+  title: 'OpenClaw compatibility',
   description:
-    'AgentGuard is the only commercial governance product that natively manages OpenClaw fleets — written by an operator who runs an 18-claw production fleet.',
+    'The current AgentGuard package includes an OpenClaw compatibility hook. It is telemetry, not executor-owned firewall proof.',
 };
 
 export default function OpenClawPage() {
@@ -12,23 +12,23 @@ export default function OpenClawPage() {
     <>
       <section className="section flush" style={{ paddingTop: 96 }}>
         <div className="container">
-          <span className="eyebrow amber">OpenClaw · fleet governance</span>
+          <span className="eyebrow amber">OpenClaw · compatibility path</span>
           <h1 style={{ marginTop: 18, maxWidth: '20ch' }}>
-            Govern OpenClaw fleets the way they were always supposed to be governed.
+            Policy telemetry for OpenClaw, with the boundary stated.
           </h1>
           <p className="lede" style={{ marginTop: 18 }}>
-            OpenClaw is the most popular open agent framework in the world. Most of
-            them run unmonitored &mdash; un-throttled spend, no tool whitelist, no
-            audit trail. AgentGuard is the only commercial governance product that
-            natively manages OpenClaw, and it ships from an operator who has been
-            running an 18-claw production fleet since 2024.
+            AgentGuard&rsquo;s TypeScript package includes a structural
+            before_tool_call HTTP hook. It can send
+            observed events for policy evaluation and return a block result. The
+            hook can be disabled or bypassed and owns no raw capability, so it is
+            not firewall proof.
           </p>
           <div className="cta-row" style={{ justifyContent: 'flex-start', marginTop: 24 }}>
             <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
-              Book a fleet review
+              Discuss an OpenClaw evaluation
             </a>
             <a className="btn btn-secondary" href="https://github.com/thebotclub/agentguard-core/blob/main/SPEC.md#openclaw">
-              Plugin docs →
+              Read the source spec →
             </a>
           </div>
         </div>
@@ -44,11 +44,10 @@ export default function OpenClawPage() {
           <div className="grid-3" style={{ marginTop: 36 }}>
             <div className="card">
               <div className="index">/01</div>
-              <h3>The Wired problem</h3>
+              <h3>Tool access is consequential</h3>
               <p>
                 The malevolent &ldquo;Clawdbot&rdquo; investigation showed how easy it is for
-                an OpenClaw process to drift &mdash; impersonating users, exfiltrating
-                data, racking up spend. Read the{' '}
+                an autonomous agent to take consequential actions. Read the{' '}
                 <a href="https://www.wired.com/story/malevolent-ai-agent-openclaw-clawdbot/" style={{ color: 'var(--teal)' }}>
                   Wired investigation
                 </a>.
@@ -56,25 +55,24 @@ export default function OpenClawPage() {
             </div>
             <div className="card">
               <div className="index">/02</div>
-              <h3>The FleetDM angle</h3>
+              <h3>Detection is not mediation</h3>
               <p>
                 FleetDM&rsquo;s research on{' '}
                 <a href="https://fleetdm.com/articles/detecting-ai-agents-like-openclaw-with-automated-tooling" style={{ color: 'var(--teal)' }}>
                   detecting OpenClaw with automated tooling
                 </a>{' '}
-                tells you what your SOC is seeing today: unidentified Python
-                processes making outbound LLM calls. AgentGuard turns those into
-                first-class, governed citizens.
+                describes ways to detect agent processes. Detection can inform an
+                inventory, but it does not prove that a tool capability is held
+                behind a separate executor identity.
               </p>
             </div>
             <div className="card">
               <div className="index">/03</div>
-              <h3>The operator angle</h3>
+              <h3>The proof boundary</h3>
               <p>
-                AgentGuard is written by someone running an 18-claw production
-                fleet &mdash; not by a consultancy who read the README. Every control
-                in the plugin exists because we needed it on a Tuesday afternoon
-                at 3pm.
+                Firewall proof requires OpenClaw to see only a mediated MCP-stdio
+                tool while a separately owned broker alone retains the raw
+                capability. That topology is still being tested.
               </p>
             </div>
           </div>
@@ -87,42 +85,45 @@ export default function OpenClawPage() {
           <div className="split">
             <div>
               <span className="eyebrow plain">Install</span>
-              <h2 style={{ marginTop: 14 }}>Drop-in plugin, no fork.</h2>
+              <h2 style={{ marginTop: 14 }}>A versioned compatibility hook.</h2>
               <p style={{ color: 'var(--text-muted)', marginTop: 14, lineHeight: 1.7 }}>
-                The AgentGuard plugin loads alongside your existing OpenClaw
-                config. It registers a pre-tool-call hook, a post-tool-call hook,
-                and a spend tracker. Your existing claws keep working &mdash; they
-                just start producing governed events.
+                The TypeScript package exposes a structural OpenClaw plugin that
+                registers a before_tool_call hook and sends the observed proposal
+                to the AgentGuard HTTP API.
               </p>
               <p style={{ color: 'var(--text-muted)', marginTop: 14, lineHeight: 1.7 }}>
-                Compatible with OpenClaw{' '}
-                <a href="https://openclaw.ai" style={{ color: 'var(--teal)' }}>v3.x and later</a>.
-                Works locally, in Docker, and inside Kubernetes operator deployments.
+                Strict mode can return a block result when evaluation fails;
+                permissive mode allows on error. Neither mode owns the underlying
+                tool capability under a separate identity. See{' '}
+                <a href="https://openclaw.ai" style={{ color: 'var(--teal)' }}>OpenClaw</a>{' '}
+                for the runtime project itself.
               </p>
             </div>
             <div className="code-window">
               <div className="code-window-header">
                 <span className="dot" /><span className="dot" /><span className="dot" />
-                <span style={{ marginLeft: 8 }}>install.sh</span>
+                <span style={{ marginLeft: 8 }}>openclaw.json</span>
               </div>
-              <pre>{`# Python claws
-pip install agentguard-tech[openclaw]
-
-# Node claws
-npm install @the-bot-club/agentguard
-
-# In your openclaw.config.yaml:
-plugins:
-  - name: agentguard
-    options:
-      policy: ./policies/cps230.yaml
-      evidence: ./evidence/
-      fleet_id: bnb-prod
-      anchor: true
-
-# Verify
-$ openclaw plugins list
-  ✓ agentguard@0.4.2  (policy: cps230)`}</pre>
+              <pre>{`{
+  "plugins": {
+    "entries": {
+      "agentguard": {
+        "enabled": true,
+        "config": {
+          "apiKey": "\${AGENTGUARD_API_KEY}",
+          "agentId": "my-agent",
+          "strict": true
+        }
+      }
+    },
+    "installs": {
+      "agentguard": {
+        "source": "npm",
+        "spec": "@the-bot-club/agentguard@0.11.0"
+      }
+    }
+  }
+}`}</pre>
             </div>
           </div>
         </div>
@@ -131,16 +132,15 @@ $ openclaw plugins list
       {/* Fleet view */}
       <section className="section">
         <div className="container">
-          <span className="eyebrow plain">Fleet view</span>
-          <h2 style={{ marginTop: 14 }}>One screen for every claw you run.</h2>
+          <span className="eyebrow plain">Current visibility</span>
+          <h2 style={{ marginTop: 14 }}>Compatibility events, not fleet proof.</h2>
           <p className="lede" style={{ marginTop: 14 }}>
-            Which claws are live, what they&rsquo;re doing, what they cost, and which
-            ones have tripped a policy. Single-pane-of-glass for the team that
-            owns the fleet, with audit-grade exports for the team that signs off
-            on it.
+            The hook can report observed tool-call proposals and policy results.
+            This does not prove complete fleet coverage, non-bypassability,
+            production use, or independent capability ownership.
           </p>
           <div className="placeholder-figure" style={{ marginTop: 28 }}>
-            fleet view · screenshot placeholder
+            compatibility telemetry only · executor-owned broker proof pending
           </div>
         </div>
       </section>
@@ -149,14 +149,14 @@ $ openclaw plugins list
       <section className="section tight" style={{ textAlign: 'center' }}>
         <div className="container">
           <h2 style={{ maxWidth: '26ch', margin: '0 auto' }}>
-            Stop guessing what your fleet is doing.
+            Evaluate the hook for what it is today.
           </h2>
           <div className="cta-row" style={{ marginTop: 24 }}>
             <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
-              Book a fleet review
+              Discuss an OpenClaw evaluation
             </a>
             <Link className="btn btn-secondary" href="/pricing">
-              See pricing
+              Read availability status
             </Link>
           </div>
         </div>

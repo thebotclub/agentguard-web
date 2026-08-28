@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Compliance — CPS 230, EU AI Act, ISO 42001',
+  title: 'Compliance status and limitations',
   description:
-    'One PDF, signed and Bitcoin-anchored, that your auditor and your board accept. APRA CPS 230 evidence pack with EU AI Act and ISO 42001 mappings.',
+    'Current AgentGuard evidence and assurance limits. No regulator, auditor, certification, or compliance outcome is claimed.',
 };
 
 export default function CompliancePage() {
@@ -12,29 +12,29 @@ export default function CompliancePage() {
     <>
       <section className="section flush" style={{ paddingTop: 96 }}>
         <div className="container">
-          <span className="eyebrow">Compliance pack</span>
+          <span className="eyebrow">Assurance status</span>
           <h1 style={{ marginTop: 18, maxWidth: '24ch' }}>
-            One PDF, signed and Bitcoin-anchored, that your auditor and your board accept.
+            Evidence work in progress. No compliance outcome claimed.
           </h1>
           <p className="lede" style={{ marginTop: 18 }}>
-            The AgentGuard Compliance pack is the artefact your CRO opens when
-            APRA asks &ldquo;tell me about your AI agents&rdquo;. It maps every action
-            your production agents took to APRA{' '}
+            AgentGuard is developing local action-control and evidence contracts.
+            The current public artifacts do not establish conformity with{' '}
             <a href="https://www.apra.gov.au/sites/default/files/2023-07/Prudential%20Standard%20CPS%20230%20Operational%20Risk%20Management%20-%20clean.pdf" style={{ color: 'var(--teal)' }}>
-              CPS 230 Operational Risk Management
+              APRA CPS 230
             </a>
             , the{' '}
             <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act" style={{ color: 'var(--teal)' }}>
-              EU AI Act implementation timeline
+              EU AI Act
             </a>
-            , and ISO 42001 controls. One PDF. Signed. Anchored. Done.
+            , or ISO/IEC 42001. They also do not establish acceptance by any
+            regulator, board, assessor, or independent certifier.
           </p>
           <div className="cta-row" style={{ justifyContent: 'flex-start', marginTop: 24 }}>
             <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
-              Book a readiness review
+              Discuss a technical evaluation
             </a>
             <a className="btn btn-secondary" href="/samples/cps230-evidence-pack-sample.pdf" target="_blank" rel="noopener">
-              View sample pack
+              View unapproved sample PDF
             </a>
           </div>
         </div>
@@ -45,64 +45,63 @@ export default function CompliancePage() {
         <div className="container">
           <div className="split">
             <div>
-              <span className="eyebrow plain">What&rsquo;s in it</span>
-              <h2 style={{ marginTop: 14 }}>Built for the audit, not for the brochure.</h2>
+              <span className="eyebrow plain">Current boundary</span>
+              <h2 style={{ marginTop: 14 }}>What the public artifacts do not prove.</h2>
               <p style={{ color: 'var(--text-muted)', marginTop: 14, lineHeight: 1.7 }}>
-                The pack is generated from your live audit log and reviewed against
-                a control library that maps directly to the frameworks your
-                auditor already uses. Every row links back to a signed event in
-                the log, anchored to the Bitcoin block-chain so the record is
-                tamper-evident.
+                Repository source can show exact contracts, package manifests,
+                compatibility adapters, and tests. It cannot by itself establish a
+                deployed control, complete event coverage, non-bypassability, or a
+                third party&rsquo;s acceptance.
               </p>
               <ul style={{ color: 'var(--text-muted)', lineHeight: 1.9, marginTop: 18, paddingLeft: 18 }}>
-                <li>Control narratives mapped to CPS 230 §§13–22 and §§35–40</li>
-                <li>EU AI Act Annex III high-risk obligations &amp; transparency duties</li>
-                <li>ISO 42001 control implementation statements</li>
-                <li>Statistical sampling plan (50 / 100 / 200 events)</li>
-                <li>Spend &amp; rate-limit attestations</li>
-                <li>Tool-call inventory and approval log</li>
-                <li>Signed Merkle root + Bitcoin anchor transaction ID</li>
+                <li>No regulator or assessor acceptance claim</li>
+                <li>No certification or legal-conformity claim</li>
+                <li>No complete runtime-coverage claim</li>
+                <li>No production or fleet claim</li>
+                <li>No public performance or reliability claim</li>
+                <li>No human-approval workflow in V1</li>
+                <li>No public evidence-pack approval</li>
               </ul>
             </div>
             <div>
-              <span className="eyebrow plain">Sample TOC</span>
+              <span className="eyebrow plain">Review checklist</span>
               <div className="toc" style={{ marginTop: 14 }}>
-                <div><span className="toc-num">01</span> Executive summary</div>
-                <div><span className="toc-num">02</span> Scope &amp; agent inventory</div>
-                <div><span className="toc-num">03</span> Risk taxonomy &amp; control map</div>
-                <div><span className="toc-num">04</span> CPS 230 control narratives</div>
-                <div><span className="toc-num">05</span> EU AI Act Article 9 / 10 / 13 / 14</div>
-                <div><span className="toc-num">06</span> ISO 42001 control statements</div>
-                <div><span className="toc-num">07</span> Statistical sampling &amp; testing</div>
-                <div><span className="toc-num">08</span> Incident &amp; killswitch register</div>
-                <div><span className="toc-num">09</span> Third-party &amp; model registry</div>
-                <div><span className="toc-num">10</span> Signature &amp; chain anchor proof</div>
+                <div><span className="toc-num">01</span> Exact artifact and version</div>
+                <div><span className="toc-num">02</span> Capability owner and caller</div>
+                <div><span className="toc-num">03</span> Policy authority</div>
+                <div><span className="toc-num">04</span> Decision and permit scope</div>
+                <div><span className="toc-num">05</span> Dispatch outcome scope</div>
+                <div><span className="toc-num">06</span> Failure semantics</div>
+                <div><span className="toc-num">07</span> Replay and freshness</div>
+                <div><span className="toc-num">08</span> Rollback state</div>
+                <div><span className="toc-num">09</span> Evidence provenance</div>
+                <div><span className="toc-num">10</span> Stated limitations</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How it's generated */}
+      {/* Evidence path */}
       <section className="section">
         <div className="container">
-          <span className="eyebrow plain">How it&rsquo;s generated</span>
-          <h2 style={{ marginTop: 14 }}>One command. One signed PDF.</h2>
+          <span className="eyebrow plain">Evidence path</span>
+          <h2 style={{ marginTop: 14 }}>Contracts first. Claims only after proof.</h2>
           <div className="grid-3" style={{ marginTop: 28 }}>
             <div className="card">
               <div className="index">/01</div>
-              <h3>Stream events</h3>
-              <p>Every tool call, every model output, every spend event flows into the audit log as it happens &mdash; signed at write time.</p>
+              <h3>Bind the artifact</h3>
+              <p>Identify the exact package, version, topology, policy, and action being evaluated.</p>
             </div>
             <div className="card">
               <div className="index">/02</div>
-              <h3>Map to frameworks</h3>
-              <p>Control library applies CPS 230, EU AI Act, and ISO 42001 mappings to each event class. You can override the mapping for bespoke controls.</p>
+              <h3>Exercise the boundary</h3>
+              <p>Test direct, alternate, disabled-hook, forged, replayed, and failure paths against an owned canary.</p>
             </div>
             <div className="card">
               <div className="index">/03</div>
-              <h3>Anchor &amp; sign</h3>
-              <p>The pack&rsquo;s Merkle root is anchored to Bitcoin via OpenTimestamps. The PDF is signed with your CA-issued key.</p>
+              <h3>Publish the limits</h3>
+              <p>Report samples, failures, exclusions, provenance, and host-compromise limits with the result.</p>
             </div>
           </div>
           <div className="code-window" style={{ marginTop: 28 }}>
@@ -110,19 +109,14 @@ export default function CompliancePage() {
               <span className="dot" /><span className="dot" /><span className="dot" />
               <span style={{ marginLeft: 8 }}>terminal</span>
             </div>
-            <pre>{`$ agentguard evidence build \\
-    --framework cps230,eu_ai_act,iso42001 \\
-    --window 2026-04-01..2026-06-30 \\
-    --sample 100 \\
-    --anchor btc \\
-    --sign ./keys/cro.pem
+            <pre>{`Current public status
 
-  ✓ 84,213 events scanned
-  ✓ 12 controls mapped (CPS 230 §§13–22, §§35–40)
-  ✓ 18 controls mapped (EU AI Act Annex III)
-  ✓ 9 controls mapped (ISO 42001)
-  ✓ Merkle root anchored — txid: 4f2c…b91d
-  ✓ Signed PDF: ./evidence/cps230-2026Q2.pdf  (4.2 MB)`}</pre>
+package contracts       available for inspection
+compatibility adapters  available for inspection
+broker topology proof   pending
+production evidence     not claimed
+compliance outcome      not claimed
+third-party acceptance  not claimed`}</pre>
           </div>
         </div>
       </section>
@@ -131,19 +125,16 @@ export default function CompliancePage() {
       <section className="section">
         <div className="container">
           <span className="eyebrow plain">EU AI Act</span>
-          <h2 style={{ marginTop: 14 }}>Ready for the high-risk obligations.</h2>
+          <h2 style={{ marginTop: 14 }}>A source to assess, not an outcome to assume.</h2>
           <div className="split" style={{ marginTop: 28 }}>
             <p style={{ color: 'var(--text-muted)', lineHeight: 1.7 }}>
-              The EU AI Act&rsquo;s high-risk obligations land in waves through 2026 and
-              2027. AgentGuard ships pre-built mappings for{' '}
+              The official implementation timeline is available from the{' '}
               <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act" style={{ color: 'var(--teal)' }}>
-                every gate in the official implementation timeline
+                EU AI Act Service Desk
               </a>{' '}
-              &mdash; risk management (Art. 9), data &amp; governance (Art. 10),
-              technical documentation (Art. 11), record-keeping (Art. 12),
-              transparency (Art. 13), and human oversight (Art. 14). Each is
-              cross-linked to its CPS 230 cousin so AU teams aren&rsquo;t maintaining
-              two control libraries.
+              for teams determining which obligations apply. AgentGuard does not
+              claim that its current packages satisfy those obligations or replace
+              legal, risk, or conformity assessment.
             </p>
             <dl className="dl">
               <dt>Risk management</dt><dd>Art. 9</dd>
@@ -161,14 +152,12 @@ export default function CompliancePage() {
       <section className="section">
         <div className="container">
           <span className="eyebrow plain">ISO/IEC 42001</span>
-          <h2 style={{ marginTop: 14 }}>AI management system, evidence first.</h2>
+          <h2 style={{ marginTop: 14 }}>No certification claim.</h2>
           <p style={{ color: 'var(--text-muted)', marginTop: 14, lineHeight: 1.7, maxWidth: '70ch' }}>
-            ISO 42001 is the AI management system standard your certification
-            body will start auditing against in 2026. AgentGuard maps clauses
-            6–10 (planning, support, operation, performance evaluation,
-            improvement) to live evidence pulled from your audit log &mdash; so the
-            initial certification audit and the surveillance audits use the same
-            artefact your APRA submission already used.
+            ISO/IEC 42001 defines requirements for an AI management system.
+            AgentGuard&rsquo;s current repository is not a certification, does not
+            establish conformity, and does not make an assessor&rsquo;s decision for
+            an operator.
           </p>
         </div>
       </section>
@@ -176,20 +165,20 @@ export default function CompliancePage() {
       {/* Who it's for */}
       <section className="section">
         <div className="container">
-          <span className="eyebrow plain">Who it&rsquo;s for</span>
-          <h2 style={{ marginTop: 14 }}>If APRA writes to you, this is for you.</h2>
+          <span className="eyebrow plain">Who should evaluate it</span>
+          <h2 style={{ marginTop: 14 }}>Technical operators testing a narrow boundary.</h2>
           <div className="grid-3" style={{ marginTop: 28 }}>
             <div className="card">
-              <h3>Neobanks &amp; BNPL</h3>
-              <p>50–500 employees, scaling AI agents in customer ops &amp; collections, with a CISO who&rsquo;s now also accountable for AI risk.</p>
+              <h3>Agent operators</h3>
+              <p>Teams that can identify a consequential action and remove the raw capability from the calling agent.</p>
             </div>
             <div className="card">
-              <h3>Super funds</h3>
-              <p>Mid-market funds modernising member services, where SPS 220 and CPS 230 overlap and the board needs one artefact.</p>
+              <h3>Security engineers</h3>
+              <p>Reviewers who can test identity separation, bypass paths, permit use, failure semantics, and local evidence.</p>
             </div>
             <div className="card">
-              <h3>Mortgage &amp; lending tech</h3>
-              <p>Brokers and originators using AI in credit decisioning, where ASIC, AUSTRAC, and APRA all want a paper trail.</p>
+              <h3>Risk owners</h3>
+              <p>People who need limitations and evidence provenance stated before deciding whether a control fits their environment.</p>
             </div>
           </div>
         </div>
@@ -198,14 +187,14 @@ export default function CompliancePage() {
       <section className="section tight" style={{ textAlign: 'center' }}>
         <div className="container">
           <h2 style={{ maxWidth: '26ch', margin: '0 auto' }}>
-            Stop building bespoke evidence packs. Generate them.
+            Inspect the artifacts before assigning assurance.
           </h2>
           <div className="cta-row" style={{ marginTop: 24 }}>
             <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
-              Book a CPS 230 readiness review
+              Discuss a technical evaluation
             </a>
             <Link className="btn btn-secondary" href="/playground">
-              Try the demo
+              Inspect policy decisions
             </Link>
           </div>
         </div>
