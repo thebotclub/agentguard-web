@@ -1,8 +1,8 @@
 {
   "schemaVersion": "agentguard.web-claim-surfaces/v1",
   "inventoryId": "core-and-public-material-surfaces-2026-08-28",
-  "sourceCoreCommit": "97c7e6f7a4250436897c680b134a31459636648e",
-  "registryDigest": "sha256:4b1b3cea18b44ef0d083178e74c927672dbcda1218f4870c5b791f9b9e73125b",
+  "sourceCoreCommit": "86ce858b47d2c84e29f2cabf04b670df4c8f3d4b",
+  "registryDigest": "sha256:8cef0f6a8ccae417c60a2a8fbc0864ad133e365b5a30fd421d5fed54eb4bde1b",
   "surfaces": [
     {
       "id": "web.readme.routes",
