@@ -14,10 +14,11 @@ export function SiteHeader() {
         <nav className="nav" aria-label="Primary">
           <div className="nav-links">
             <Link href="/openclaw">OpenClaw</Link>
-            <Link href="/playground">Playground</Link>
-            <Link href="/compliance">Compliance</Link>
-            <Link href="/pricing">Pricing</Link>
-            <Link href="/self-hosted">Self-hosted</Link>
+            <Link href="/trust">Trust</Link>
+            <Link href="/playground">Policy evaluator</Link>
+            <Link href="/compliance">Assurance status</Link>
+            <Link href="/pricing">Availability</Link>
+            <Link href="/self-hosted">Deployment status</Link>
             <a href="https://github.com/thebotclub/agentguard-core#readme">Docs</a>
             <a href="https://github.com/thebotclub/agentguard-core">GitHub</a>
           </div>
@@ -27,7 +28,7 @@ export function SiteHeader() {
               className="btn btn-secondary btn-sm"
               href="/playground"
             >
-              Demo
+              Evaluate policy
             </Link>
             <a
               className="btn btn-primary btn-sm"

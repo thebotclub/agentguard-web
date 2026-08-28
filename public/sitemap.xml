@@ -2,9 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://agentguard.tech/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://agentguard.tech/openclaw/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://agentguard.tech/trust/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://agentguard.tech/compliance/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://agentguard.tech/playground/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://agentguard.tech/pricing/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://agentguard.tech/self-hosted/</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://agentguard.tech/blog/</loc><priority>0.6</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://agentguard.tech/about/</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
 </urlset>

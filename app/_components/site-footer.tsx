@@ -12,18 +12,18 @@ export function SiteFooter() {
               <span>AgentGuard</span>
             </div>
             <p style={{ color: 'var(--text-muted)', maxWidth: '32ch', fontSize: '0.92rem', lineHeight: 1.6 }}>
-              Runtime governance for production AI agents. Built for APRA-regulated
-              financial services in Australia and APAC.
+              Local policy contracts and compatibility telemetry for AI agent
+              actions. Executor-owned broker proof remains pending.
             </p>
           </div>
           <div>
             <h4>Product</h4>
             <ul>
-              <li><Link href="/openclaw">OpenClaw governance</Link></li>
-              <li><Link href="/compliance">Compliance pack</Link></li>
-              <li><Link href="/pricing">Pricing</Link></li>
-              <li><Link href="/self-hosted">Self-hosted</Link></li>
-              <li><Link href="/playground">Live demo</Link></li>
+              <li><Link href="/openclaw">OpenClaw compatibility</Link></li>
+              <li><Link href="/trust">Trust and limitations</Link></li>
+              <li><Link href="/compliance">Assurance status</Link></li>
+              <li><Link href="/self-hosted">Deployment status</Link></li>
+              <li><Link href="/playground">Policy evaluator</Link></li>
             </ul>
           </div>
           <div>
@@ -39,7 +39,7 @@ export function SiteFooter() {
           <div>
             <h4>Company</h4>
             <ul>
-              <li><a href="/about">About</a></li>
+              <li><Link href="/about">About</Link></li>
               <li><a href="https://calendly.com/hani-thebot/30min">Book a review</a></li>
               <li><a href="mailto:[email protected]">Contact</a></li>
               <li><a href="https://tribunal.dev">Tribunal (coding agents)</a></li>
@@ -49,7 +49,7 @@ export function SiteFooter() {
         <div className="footer-bottom">
           <div>© {new Date().getFullYear()} The Bot Club Pty Ltd · ABN 99 695 980 226</div>
           <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem' }}>
-            v0.1 · built in Sydney
+            Proof status pending · built in Sydney
           </div>
         </div>
       </div>

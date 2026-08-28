@@ -1,8 +1,8 @@
 {
   "schemaVersion": "agentguard.web-claim-surfaces/v1",
   "inventoryId": "core-and-public-material-surfaces-2026-08-28",
-  "sourceCoreCommit": "cd5c7fa6622fde0eb4d065b0f4770897258a6764",
-  "registryDigest": "sha256:2816ab788512914e14f3eddc2607f0d66519f7cf52796f08ace27cffc050df33",
+  "sourceCoreCommit": "5564bbbe536212f30ab55453d23f72569b93b745",
+  "registryDigest": "sha256:b997761262b37740e03c563b6cf85c517e3e6ae182c44f85b7a2d4bb37fdec69",
   "surfaces": [
     {
       "id": "web.readme.routes",
@@ -41,6 +41,21 @@
       "expectedTextOrValue": "OpenClaw, Playground, Compliance, Pricing, Docs",
       "prohibitedPatterns": [
         "links promising unsupported public routes"
+      ]
+    },
+    {
+      "id": "web.trust.assurance-boundary",
+      "claimId": "public.compliance-and-assurance",
+      "repository": "agentguard-web",
+      "path": "app/trust/page.tsx",
+      "kind": "code",
+      "locator": "metadata and two-tier assurance, host, dispatcher, key, failure, rollback, route, version, and proof-pending limitations",
+      "expectedTextOrValue": "Firewall proof and Compatibility, with topology proof pending",
+      "prohibitedPatterns": [
+        "Topology GO achieved",
+        "production-ready firewall",
+        "unbypassable on the host",
+        "protects against malicious administrators"
       ]
     },
     {

@@ -1,9 +1,9 @@
 {
   "schemaVersion": "agentguard.claim-registry-snapshot/v1",
-  "sourceCoreCommit": "cd5c7fa6622fde0eb4d065b0f4770897258a6764",
-  "registryDigest": "sha256:2816ab788512914e14f3eddc2607f0d66519f7cf52796f08ace27cffc050df33",
-  "generatedAt": "2026-08-28T10:10:22+10:00",
-  "claimsDigest": "sha256:dbf59ac2bd3d47e38b57c877b275eed23c46983ad23abd9e49118146cc83f5a4",
+  "sourceCoreCommit": "5564bbbe536212f30ab55453d23f72569b93b745",
+  "registryDigest": "sha256:b997761262b37740e03c563b6cf85c517e3e6ae182c44f85b7a2d4bb37fdec69",
+  "generatedAt": "2026-08-28T04:37:04.214Z",
+  "claimsDigest": "sha256:3e1a8161ed92b240dcd9934fd57e74f29efd184a923905f95fe3b0ab6bacea3c",
   "claims": [
     {
       "id": "public.binary-assets",
@@ -65,7 +65,8 @@
         "web.blog.apra-article",
         "web.compliance.page",
         "web.home.page",
-        "web.layout.metadata"
+        "web.layout.metadata",
+        "web.trust.assurance-boundary"
       ]
     },
     {
@@ -173,12 +174,17 @@
           "kind": "review",
           "path": "governance/claim-surfaces.core.json",
           "locator": "public.routes-config-and-examples locators"
+        },
+        {
+          "kind": "source",
+          "path": "api/server.ts",
+          "locator": "setup.sdks"
         }
       ],
       "limitations": [
-        "Several examples currently reference fictional packages, stale versions, missing paths, or unsupported config shapes."
+        "Core API install examples now match package manifests; website routes, configuration, and examples remain separately qualified until corrected."
       ],
-      "qualification": "The inventory records current text without endorsing it as supported.",
+      "qualification": "A source example proves only its exact route or manifest relationship, not deployment, publication, or broader product availability.",
       "reviewedAt": "2026-08-28T00:00:00Z",
       "expiresAt": "2026-09-27T00:00:00Z",
       "reviewer": "docs-maintainers",
