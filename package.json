@@ -2,12 +2,17 @@
   "name": "agentguard-web",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "npm@11.19.0",
+  "engines": {
+    "node": "24.20.0",
+    "npm": "11.19.0"
+  },
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
     "build:preview": "next build && node scripts/rewrite-relative.mjs",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "ESLINT_USE_FLAT_CONFIG=false eslint app lib scripts tests --config node_modules/eslint-config-next/index.js --ext .js,.mjs,.ts,.tsx --max-warnings=0",
     "test": "node --test tests/material-claims.test.mjs",
     "test:evidence-toolchain": "node -e \"const fs=require('node:fs');const assert=require('node:assert/strict');const pkg=require('./package.json');assert.equal(fs.readFileSync('.node-version','utf8'),'24.20.0\\n');assert.equal(pkg.packageManager,'npm@11.19.0');assert.deepEqual(pkg.engines,{node:'24.20.0',npm:'11.19.0'});const workflow=fs.readFileSync('.github/workflows/deploy.yml','utf8');for(const gate of ['npm run check:claims','npm test','npm run typecheck','npm run lint','npm run build']) assert.match(workflow,new RegExp(gate.replace(':','\\\\:')));\"",
     "typecheck": "tsc --noEmit",
