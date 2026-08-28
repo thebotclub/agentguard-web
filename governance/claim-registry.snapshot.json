@@ -1,41 +1,10 @@
 {
   "schemaVersion": "agentguard.claim-registry-snapshot/v1",
-  "sourceCoreCommit": "5564bbbe536212f30ab55453d23f72569b93b745",
+  "sourceCoreCommit": "319ecd99b462a57ce93d5244ca7d7c63eb19a978",
   "registryDigest": "sha256:b997761262b37740e03c563b6cf85c517e3e6ae182c44f85b7a2d4bb37fdec69",
-  "generatedAt": "2026-08-28T04:37:04.214Z",
-  "claimsDigest": "sha256:3e1a8161ed92b240dcd9934fd57e74f29efd184a923905f95fe3b0ab6bacea3c",
+  "generatedAt": "2026-08-28T04:40:42.875Z",
+  "claimsDigest": "sha256:06f3f2d6a8f635fa91c5a347d345bd9f0eed8451270d0d7b5c0872cfc3ab0589",
   "claims": [
-    {
-      "id": "public.binary-assets",
-      "owner": "web-maintainers",
-      "meaning": "The public PDF and OpenGraph image bytes are material claim surfaces tracked by exact SHA-256 digest and pending manual content review.",
-      "state": "qualified",
-      "appliesTo": {
-        "artifact": "agentguard-web binary public assets",
-        "version": "sha256-pinned-2026-08-28",
-        "route": "/public-assets",
-        "assuranceTier": "manual-review-pending"
-      },
-      "evidence": [
-        {
-          "kind": "review",
-          "path": "governance/claim-surfaces.core.json",
-          "locator": "sha256 binary entries"
-        }
-      ],
-      "limitations": [
-        "Digest registration does not establish truthful rendered content; PDF and both OG images still require visual review."
-      ],
-      "qualification": "Binary content is unapproved until a dated manual-review outcome replaces pending.",
-      "reviewedAt": "2026-08-28T00:00:00Z",
-      "expiresAt": "2026-09-27T00:00:00Z",
-      "reviewer": "web-maintainers",
-      "surfaceIds": [
-        "web.binary.evidence-pack-pdf",
-        "web.binary.og-jpg",
-        "web.binary.og-png"
-      ]
-    },
     {
       "id": "public.compliance-and-assurance",
       "owner": "security-product",

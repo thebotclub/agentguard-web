@@ -33,9 +33,6 @@ export default function CompliancePage() {
             <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
               Discuss a technical evaluation
             </a>
-            <a className="btn btn-secondary" href="/samples/cps230-evidence-pack-sample.pdf" target="_blank" rel="noopener">
-              View unapproved sample PDF
-            </a>
           </div>
         </div>
       </section>

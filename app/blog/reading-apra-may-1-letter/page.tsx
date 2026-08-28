@@ -16,13 +16,11 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2026-05-15T00:00:00Z',
     authors: ['Hani Koshaji'],
-    images: ['/og.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: "Reading APRA's May 1 letter as an Australian fintech CTO",
     description: 'Commentary on a public APRA letter, not compliance advice.',
-    images: ['/og.png'],
   },
 };
 

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "agentguard.web-claim-surfaces/v1",
   "inventoryId": "core-and-public-material-surfaces-2026-08-28",
-  "sourceCoreCommit": "5564bbbe536212f30ab55453d23f72569b93b745",
+  "sourceCoreCommit": "319ecd99b462a57ce93d5244ca7d7c63eb19a978",
   "registryDigest": "sha256:b997761262b37740e03c563b6cf85c517e3e6ae182c44f85b7a2d4bb37fdec69",
   "surfaces": [
     {
@@ -222,63 +222,6 @@
       "prohibitedPatterns": [
         "unsupported route presented as current"
       ]
-    },
-    {
-      "id": "web.binary.evidence-pack-pdf",
-      "claimId": "public.binary-assets",
-      "repository": "agentguard-web",
-      "path": "public/samples/cps230-evidence-pack-sample.pdf",
-      "kind": "pdf",
-      "locator": "entire binary",
-      "expectedTextOrValue": "manual rendered-content review pending",
-      "prohibitedPatterns": [
-        "unreviewed compliance or acceptance assertion"
-      ],
-      "digest": "sha256:3c60ccfe94481fe3ef97a06eb7c8c0f818b55a85569f96cf729f846380ab691a",
-      "manualReview": {
-        "reviewer": "founder-technical-review",
-        "reviewedAt": "2026-08-28T00:00:00Z",
-        "outcome": "pending",
-        "notes": "Digest registered; rendered visual/content review is not complete."
-      }
-    },
-    {
-      "id": "web.binary.og-jpg",
-      "claimId": "public.binary-assets",
-      "repository": "agentguard-web",
-      "path": "public/og.jpg",
-      "kind": "image",
-      "locator": "entire binary",
-      "expectedTextOrValue": "manual visual review pending",
-      "prohibitedPatterns": [
-        "unreviewed assurance or production assertion"
-      ],
-      "digest": "sha256:cf54b19cc6699f7e8ba159c2b90165da9fdb2ece6312ef67268002098f24f785",
-      "manualReview": {
-        "reviewer": "founder-technical-review",
-        "reviewedAt": "2026-08-28T00:00:00Z",
-        "outcome": "pending",
-        "notes": "Digest registered; visual text/content review is not complete."
-      }
-    },
-    {
-      "id": "web.binary.og-png",
-      "claimId": "public.binary-assets",
-      "repository": "agentguard-web",
-      "path": "public/og.png",
-      "kind": "image",
-      "locator": "entire binary",
-      "expectedTextOrValue": "manual visual review pending",
-      "prohibitedPatterns": [
-        "unreviewed assurance or production assertion"
-      ],
-      "digest": "sha256:030bbb107d4df69e7279baab7572235e1737808da35f4108cc89f242142839be",
-      "manualReview": {
-        "reviewer": "founder-technical-review",
-        "reviewedAt": "2026-08-28T00:00:00Z",
-        "outcome": "pending",
-        "notes": "Digest registered; visual text/content review is not complete."
-      }
     }
   ]
 }
