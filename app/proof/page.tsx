@@ -46,6 +46,20 @@ export default function ProofPage() {
               <code>named-action-proof-deny.txt</code> was not created (GitHub
               404; adapter writes 0; docker not started)
             </li>
+            <li>
+              Owned OpenClaw fleet: <code>mcp.servers.agentguard-github</code>{' '}
+              command is the broker wrap; the unwrapped{' '}
+              <code>github-mcp-stdio</code> command was deleted. HTTP{' '}
+              <code>autoclaw-github</code> stays off. OpenClaw MCP doctor:{' '}
+              <code>agentguard-github: ok</code>.
+            </li>
+            <li>
+              Fleet unwrapped step{' '}
+              <code>named-action-proof-fleet-stdio.txt</code> sha{' '}
+              <code>575aa0a39c7233534e9f6ede3f3ca56bb87a1d43</code>; after
+              replace <code>named-action-proof-fleet-broker.txt</code> sha{' '}
+              <code>9da6c5eea1a73901a6db696c2e821703648a2c3c</code>
+            </li>
           </ul>
 
           <h2>Assurance tier actually earned</h2>
