@@ -14,8 +14,10 @@ export default function TrustPage() {
         <h1 style={{ marginTop: 14 }}>What AgentGuard proves today.</h1>
         <p className="lede" style={{ marginTop: 14 }}>
           AgentGuard separates current compatibility telemetry from the stronger
-          executor-owned broker proof it is designed to earn. The broker topology
-          remains unproven, and no GO decision has been recorded.
+          executor-owned broker proof it is designed to earn. A same-UID
+          configured intercept exists for one named GitHub file write; see{' '}
+          <a href="/proof">the named-action proof</a>. Capability isolation and
+          firewall results are not claimed, and no GO decision has been recorded.
         </p>
 
         <div className="prose" style={{ marginTop: 48 }}>

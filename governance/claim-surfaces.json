@@ -44,6 +44,23 @@
       ]
     },
     {
+      "id": "web.proof.page",
+      "claimId": "public.compliance-and-assurance",
+      "repository": "agentguard-web",
+      "path": "app/proof/page.tsx",
+      "kind": "code",
+      "locator": "named github.create_or_update_file proof, configured-intercept scope, bypass matrix, uncovered native and HTTP routes",
+      "expectedTextOrValue": "configured intercept for one named GitHub write; isolation and firewall results not claimed",
+      "prohibitedPatterns": [
+        "unbypassable",
+        "production-ready firewall",
+        "Topology GO achieved",
+        "regulator can sign off",
+        "CPS 230 evidence on Day 1",
+        "$2,500"
+      ]
+    },
+    {
       "id": "web.trust.assurance-boundary",
       "claimId": "public.compliance-and-assurance",
       "repository": "agentguard-web",

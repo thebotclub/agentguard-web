@@ -3,7 +3,7 @@
   "sourceCoreCommit": "86ce858b47d2c84e29f2cabf04b670df4c8f3d4b",
   "registryDigest": "sha256:8cef0f6a8ccae417c60a2a8fbc0864ad133e365b5a30fd421d5fed54eb4bde1b",
   "generatedAt": "2026-08-28T05:19:03Z",
-  "claimsDigest": "sha256:06f3f2d6a8f635fa91c5a347d345bd9f0eed8451270d0d7b5c0872cfc3ab0589",
+  "claimsDigest": "sha256:f8e026bd1e0b5952d226f0e41d96ccc793f4737fed8eea2876de13f490bb0d7d",
   "claims": [
     {
       "id": "public.compliance-and-assurance",
@@ -35,6 +35,7 @@
         "web.compliance.page",
         "web.home.page",
         "web.layout.metadata",
+        "web.proof.page",
         "web.trust.assurance-boundary"
       ]
     },

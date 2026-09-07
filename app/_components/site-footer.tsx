@@ -21,6 +21,7 @@ export function SiteFooter() {
             <ul>
               <li><Link href="/openclaw">OpenClaw compatibility</Link></li>
               <li><Link href="/trust">Trust and limitations</Link></li>
+              <li><Link href="/proof">Named-action proof</Link></li>
               <li><Link href="/compliance">Assurance status</Link></li>
               <li><Link href="/self-hosted">Deployment status</Link></li>
               <li><Link href="/playground">Policy evaluator</Link></li>

@@ -15,6 +15,7 @@ export function SiteHeader() {
           <div className="nav-links">
             <Link href="/openclaw">OpenClaw</Link>
             <Link href="/trust">Trust</Link>
+            <Link href="/proof">Proof</Link>
             <Link href="/playground">Policy evaluator</Link>
             <Link href="/compliance">Assurance status</Link>
             <Link href="/pricing">Availability</Link>
