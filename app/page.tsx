@@ -19,12 +19,12 @@ export default function Home() {
             remains pending.
           </p>
           <div className="cta-row">
-            <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
+            <Link className="btn btn-primary" href="/proof">
+              Read the named-action proof
+            </Link>
+            <a className="btn btn-secondary" href="https://calendly.com/hani-thebot/30min">
               Discuss a technical evaluation
             </a>
-            <Link className="btn btn-secondary" href="/playground">
-              Inspect policy decisions
-            </Link>
           </div>
           <div className="hero-meta">
             <div className="install-row">
@@ -87,10 +87,9 @@ export default function Home() {
               <div className="index">/03</div>
               <h3>Proof before stronger claims</h3>
               <p>
-                The intended firewall boundary is an executor-owned local MCP-stdio
-                broker that alone retains the raw capability. That topology is not
-                yet shipped or proven, so no production, compliance, or fleet
-                outcome is claimed here.
+                A same-UID configured intercept exists for one GitHub file write.
+                Capability isolation and firewall results are not claimed. See the{' '}
+                <Link href="/proof">named-action proof</Link>.
               </p>
             </div>
           </div>
