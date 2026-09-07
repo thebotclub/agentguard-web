@@ -19,7 +19,7 @@ The AgentGuard marketing site — Next.js 15 (App Router), React 19, static expo
 
 - `/` — homepage (hero, integrations, why, how, OpenClaw, Tribunal pair, pricing snapshot)
 - `/openclaw` — OpenClaw fleet governance
-- `/compliance` — CPS 230, EU AI Act, ISO 42001 evidence pack
+- `/compliance` — current evidence limits; no regulator or certification outcome
 - `/pricing` — full feature comparison
 - `/self-hosted` — Docker + Helm
 - `/blog` — coming soon placeholder
