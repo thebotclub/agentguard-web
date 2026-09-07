@@ -1,0 +1,1 @@
+Q-A step 2: OpenClaw command replaced with broker wrap; unwrapped github-stdio deleted
