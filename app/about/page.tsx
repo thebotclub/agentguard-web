@@ -67,10 +67,14 @@ export default function AboutPage() {
           <h2>Where we are</h2>
           <ul>
             <li>
-              <strong>v0.11.0</strong> — runtime engine, hash-chained audit
-              source, canonical TypeScript v1 contracts, and compatibility
-              adapters. The OpenClaw hook and MCP HTTP/in-process paths are
-              telemetry only, not executor-owned firewall proof.
+              <strong>v0.11.0</strong> — historical metadata release. Compatibility
+              adapters only; not executor-owned firewall proof.
+            </li>
+            <li>
+              <strong>v0.11.2</strong> — current npm and PyPI. Fail-open{' '}
+              <code>strict: false</code> is a hard startup error. Named GitHub
+              file-write intercept is documented on the proof page as configured
+              intercept, not isolation.
             </li>
             <li>
               Live SDKs on{' '}

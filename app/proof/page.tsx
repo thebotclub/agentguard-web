@@ -29,6 +29,10 @@ export default function ProofPage() {
           </p>
           <ul>
             <li>
+              Current packages: <code>@the-bot-club/agentguard@0.11.2</code> and{' '}
+              <code>agentguard-tech==0.11.2</code>
+            </li>
+            <li>
               Upstream image{' '}
               <code>ghcr.io/github/github-mcp-server@sha256:46cdbbd810faf6f7aed1745ea04057443f5cb9fcadc15c7308add18cf9a83e33</code>
             </li>

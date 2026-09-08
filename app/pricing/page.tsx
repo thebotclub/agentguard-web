@@ -13,8 +13,8 @@ const features: Array<{
   limit: string;
   next: string;
 }> = [
-  { label: 'TypeScript SDK', current: '0.11.0', evidence: 'Package manifest', limit: 'Compatibility paths are not firewall proof', next: 'Topology proof' },
-  { label: 'Python SDK', current: '0.11.1', evidence: 'Package manifest', limit: 'No TypeScript v1 parity claim', next: 'Compatibility fixes only' },
+  { label: 'TypeScript SDK', current: '0.11.2', evidence: 'Package manifest', limit: 'Compatibility paths are not firewall proof', next: 'Named-action intercept is not isolation' },
+  { label: 'Python SDK', current: '0.11.2', evidence: 'Package manifest', limit: 'No TypeScript v1 parity claim', next: 'Compatibility fixes only' },
   { label: 'OpenClaw hook', current: 'Source available', evidence: 'Structural hook tests', limit: 'Can be disabled or bypassed', next: 'MCP-stdio broker' },
   { label: 'MCP adapters', current: 'Source available', evidence: 'HTTP/in-process tests', limit: 'No separate capability owner', next: 'MCP-stdio broker' },
   { label: 'Local v1 contracts', current: 'Source available', evidence: 'Schema and conformance tests', limit: 'No deployment outcome implied', next: 'Vertical broker path' },
@@ -52,7 +52,7 @@ export default function PricingPage() {
           <div className="price-grid">
             <div className="price-card">
               <h3>TypeScript SDK</h3>
-              <div className="amount">0.11.0 <small>/ TypeScript</small></div>
+              <div className="amount">0.11.2 <small>/ TypeScript</small></div>
               <ul>
                 <li>Published package manifest</li>
                 <li>Canonical local v1 contracts</li>
@@ -63,7 +63,7 @@ export default function PricingPage() {
             </div>
             <div className="price-card featured">
               <h3>Python SDK</h3>
-              <div className="amount">0.11.1 <small>/ Python</small></div>
+              <div className="amount">0.11.2 <small>/ Python</small></div>
               <ul>
                 <li>Independent release line</li>
                 <li>HTTP policy evaluation</li>

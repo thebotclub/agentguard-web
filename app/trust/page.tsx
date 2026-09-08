@@ -44,13 +44,13 @@ export default function TrustPage() {
             or bypassed by a caller that retains another route.
           </p>
           <p>
-            Current source facts are the TypeScript package{' '}
-            <code>@the-bot-club/agentguard</code> at <code>0.11.0</code>, OpenClaw
-            plugin metadata at <code>1.0.0</code> using{' '}
-            <code>/v1/openclaw/intercept</code>, and the MCP compatibility route{' '}
-            <code>/v1/mcp/intercept</code>. These versions and routes describe
-            checked-in compatibility artifacts, not deployed-currentness or
-            broker proof.
+            Current published packages are TypeScript{' '}
+            <code>@the-bot-club/agentguard@0.11.2</code> and Python{' '}
+            <code>agentguard-tech==0.11.2</code>. <code>strict: false</code>{' '}
+            allow-on-error is a hard startup error. OpenClaw plugin metadata is{' '}
+            <code>1.0.0</code> using <code>/v1/openclaw/intercept</code>; the MCP
+            compatibility route is <code>/v1/mcp/intercept</code>. These are
+            compatibility artifacts, not executor-owned broker proof.
           </p>
 
           <h2>Boundary limits</h2>
