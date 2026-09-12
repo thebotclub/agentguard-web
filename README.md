@@ -23,7 +23,9 @@ The AgentGuard marketing site — Next.js 15 (App Router), React 19, static expo
 - `/pricing` — full feature comparison
 - `/self-hosted` — Docker + Helm
 - `/blog` — coming soon placeholder
-- `/docs` — meta-refresh redirect to docs.agentguard.tech
+- `/docs` — documentation: quickstart, policy YAML reference, OpenClaw/MCP
+  adapters, authentication, telemetry, kill switch, source, support,
+  limitations
 
 ## Develop
 
