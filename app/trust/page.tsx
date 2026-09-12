@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Trust and limitations',
@@ -45,12 +46,15 @@ export default function TrustPage() {
           </p>
           <p>
             Current published packages are TypeScript{' '}
-            <code>@the-bot-club/agentguard@0.11.2</code> and Python{' '}
-            <code>agentguard-tech==0.11.2</code>. <code>strict: false</code>{' '}
-            allow-on-error is a hard startup error. OpenClaw plugin metadata is{' '}
-            <code>1.0.0</code> using <code>/v1/openclaw/intercept</code>; the MCP
-            compatibility route is <code>/v1/mcp/intercept</code>. These are
-            compatibility artifacts, not executor-owned broker proof.
+            <code>@the-bot-club/agentguard@0.11.3</code> and Python{' '}
+            <code>agentguard-tech==0.11.3</code>. <code>strict: false</code>{' '}
+            allow-on-error is a hard startup error. The OpenClaw hook and MCP
+            adapters call <code>POST /api/v1/evaluate</code> on the AgentGuard API
+            with <code>X-API-Key</code>; the API also accepts the 0.11.2{' '}
+            <code>/v1/openclaw/intercept</code> and <code>/v1/mcp/intercept</code>{' '}
+            envelopes so already-installed 0.11.2 adapters keep working. OpenClaw
+            plugin metadata is <code>1.0.0</code>. These are compatibility
+            artifacts, not executor-owned broker proof.
           </p>
 
           <h2>Boundary limits</h2>
@@ -91,25 +95,13 @@ export default function TrustPage() {
 
           <h2>Contract sources</h2>
           <p>
-            Review the checked-in{' '}
-            <a href="https://github.com/thebotclub/agentguard-core/blob/main/governance/contracts/v1/assurance-tiers.json">
-              assurance tiers
-            </a>
-            ,{' '}
-            <a href="https://github.com/thebotclub/agentguard-core/blob/main/governance/contracts/v1/key-lifecycle.json">
-              key lifecycle
-            </a>
-            ,{' '}
-            <a href="https://github.com/thebotclub/agentguard-core/blob/main/governance/contracts/v1/failure-matrix.json">
-              failure matrix
-            </a>
-            , and{' '}
-            <a href="https://github.com/thebotclub/agentguard-core/blob/main/governance/contracts/v1/rollback-states.json">
-              rollback states
-            </a>
-            . These contracts define intended V1 behavior; they do not by
-            themselves establish that the broker topology is implemented or
-            proven.
+            The V1 contracts for assurance tiers, key lifecycle, failure
+            matrix, and rollback states are checked into the core
+            repository; the{' '}
+            <Link href="/docs/#policy">policy reference</Link> restates
+            their default and fail-closed semantics. These contracts
+            define intended V1 behavior; they do not by themselves
+            establish that the broker topology is implemented or proven.
           </p>
         </div>
       </div>
