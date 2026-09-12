@@ -29,8 +29,8 @@ export default function ProofPage() {
           </p>
           <ul>
             <li>
-              Current packages: <code>@the-bot-club/agentguard@0.11.2</code> and{' '}
-              <code>agentguard-tech==0.11.2</code>
+              Current packages: <code>@the-bot-club/agentguard@0.11.3</code> and{' '}
+              <code>agentguard-tech==0.11.3</code>
             </li>
             <li>
               Upstream image{' '}

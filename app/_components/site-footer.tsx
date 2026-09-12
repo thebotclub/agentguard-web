@@ -31,7 +31,7 @@ export function SiteFooter() {
             <h4>Developers</h4>
             <ul>
               <li><Link href="/docs/">Documentation</Link></li>
-              <li><a href="https://github.com/thebotclub/agentguard-core">GitHub</a></li>
+              <li><Link href="/docs/#source">Source</Link></li>
               <li><a href="https://www.npmjs.com/package/@the-bot-club/agentguard">npm</a></li>
               <li><a href="https://pypi.org/project/agentguard-tech/">PyPI</a></li>
               <li><Link href="/blog">Blog</Link></li>

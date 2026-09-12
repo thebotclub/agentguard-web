@@ -133,8 +133,8 @@ rules:
             <div className="card">
               <div className="index">step 04</div>
               <h3>Read the limitations</h3>
-              <p>The repository documents which adapters are compatibility-only and which broker proof is still missing.</p>
-              <pre className="code-block" style={{ marginTop: 14 }}>github.com/thebotclub/agentguard-core</pre>
+              <p>The docs page documents which adapters are compatibility-only and which broker proof is still missing.</p>
+              <pre className="code-block" style={{ marginTop: 14 }}>agentguard.tech/docs/#limitations</pre>
             </div>
           </div>
         </div>
@@ -184,7 +184,7 @@ rules:
     "installs": {
       "agentguard": {
         "source": "npm",
-        "spec": "@the-bot-club/agentguard@0.11.2"
+        "spec": "@the-bot-club/agentguard@0.11.3"
       }
     }
   }
@@ -233,7 +233,7 @@ rules:
           <div className="price-grid">
             <div className="price-card">
               <h3>TypeScript</h3>
-              <div className="amount">0.11.2 <small>/ TypeScript</small></div>
+              <div className="amount">0.11.3 <small>/ TypeScript</small></div>
               <ul>
                 <li>Published package manifest</li>
                 <li>Canonical local v1 contracts</li>
@@ -243,7 +243,7 @@ rules:
             </div>
             <div className="price-card featured">
               <h3>Python</h3>
-              <div className="amount">0.11.2 <small>/ Python</small></div>
+              <div className="amount">0.11.3 <small>/ Python</small></div>
               <ul>
                 <li>Independent compatibility release</li>
                 <li>HTTP policy evaluation</li>

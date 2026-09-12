@@ -27,9 +27,9 @@ export default function OpenClawPage() {
             <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
               Discuss an OpenClaw evaluation
             </a>
-            <a className="btn btn-secondary" href="https://github.com/thebotclub/agentguard-core/blob/main/SPEC.md#openclaw">
-              Read the source spec →
-            </a>
+            <Link className="btn btn-secondary" href="/docs/#openclaw">
+              Read the OpenClaw docs →
+            </Link>
           </div>
         </div>
       </section>
@@ -119,7 +119,7 @@ export default function OpenClawPage() {
     "installs": {
       "agentguard": {
         "source": "npm",
-        "spec": "@the-bot-club/agentguard@0.11.2"
+        "spec": "@the-bot-club/agentguard@latest"
       }
     }
   }
