@@ -297,7 +297,7 @@ if (result.blocked) {
     arguments={"path": "/etc/passwd", "content": "..."},
 )
 if result["blocked"]:
-    return result["mcp_error_response"]`}</code></pre>
+    return result["mcpErrorResponse"]`}</code></pre>
           <p>
             Both the HTTP proxy and the in-process wrapper evaluate
             through <code>POST /api/v1/evaluate</code> and carry the same

@@ -92,9 +92,11 @@ export default function OpenClawPage() {
                 to the AgentGuard HTTP API.
               </p>
               <p style={{ color: 'var(--text-muted)', marginTop: 14, lineHeight: 1.7 }}>
-                Strict mode can return a block result when evaluation fails;
-                permissive mode allows on error. Neither mode owns the underlying
-                tool capability under a separate identity. See{' '}
+                Evaluation failures return a block result, and there is no
+                fail-open path: the plugin refuses to register at all when it is
+                configured with <code>strict: false</code>. Failing closed still
+                does not own the underlying tool capability under a separate
+                identity. See{' '}
                 <a href="https://openclaw.ai" style={{ color: 'var(--teal)' }}>OpenClaw</a>{' '}
                 for the runtime project itself.
               </p>

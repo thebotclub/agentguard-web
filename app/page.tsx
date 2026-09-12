@@ -124,7 +124,10 @@ engine.evaluate(request, ctx, policy.id);`}</pre>
               <div className="index">step 03</div>
               <h3>Keep deferred states blocked</h3>
               <p>V1 can allow or block. A require-approval decision blocks dispatch; human approval is deferred.</p>
-              <pre className="code-block" style={{ marginTop: 14 }}>{`default: block
+              <pre className="code-block" style={{ marginTop: 14 }}>{`id: agent-baseline
+name: Agent baseline policy
+version: 1.0.0
+default: block
 rules:
   - { id: allow-reads, action: allow, when: [{ tool: { in: [read_file, search] } }] }
   - { id: approve-email, action: require_approval, when: [{ tool: { in: [send_email] } }] }
@@ -155,8 +158,8 @@ rules:
               </p>
               <ul style={{ color: 'var(--text-muted)', lineHeight: 1.8, marginTop: 18, paddingLeft: 18 }}>
                 <li>Current artifact: TypeScript compatibility hook.</li>
-                <li>Strict mode can return a block when evaluation fails.</li>
-                <li>Permissive mode allows on evaluation error.</li>
+                <li>Evaluation failures return a block; there is no fail-open path.</li>
+                <li><code>strict: false</code> is refused at startup, not honoured.</li>
                 <li>Executor-owned MCP-stdio broker proof is pending.</li>
               </ul>
               <div style={{ marginTop: 24, display: 'flex', gap: 10 }}>
