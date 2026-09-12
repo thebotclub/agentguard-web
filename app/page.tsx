@@ -113,23 +113,22 @@ export default function Home() {
             <div className="card">
               <div className="index">step 02</div>
               <h3>Evaluate a proposal</h3>
-              <p>The compatibility SDKs can send a proposed action to the policy API and return its decision.</p>
-              <pre className="code-block" style={{ marginTop: 14 }}>{`from agentguard import guard
+              <p>The TypeScript package can load a YAML policy and evaluate it in-process — no network call, no API key.</p>
+              <pre className="code-block" style={{ marginTop: 14 }}>{`import { PolicyEngine } from "@the-bot-club/agentguard";
 
-@guard(policy="local-policy")
-def run_agent(...): ...`}</pre>
+const engine = new PolicyEngine();
+engine.loadFromYaml(yaml);
+engine.evaluate(request, ctx, policy.id);`}</pre>
             </div>
             <div className="card">
               <div className="index">step 03</div>
               <h3>Keep deferred states blocked</h3>
               <p>V1 can allow or block. A require-approval decision blocks dispatch; human approval is deferred.</p>
-              <pre className="code-block" style={{ marginTop: 14 }}>{`limits:
-  daily_spend_aud: 500
-  tools_allow:
-    - search
-    - read_file
-require_approval:
-  - send_email`}</pre>
+              <pre className="code-block" style={{ marginTop: 14 }}>{`default: block
+rules:
+  - { id: allow-reads, action: allow, when: [{ tool: { in: [read_file, search] } }] }
+  - { id: approve-email, action: require_approval, when: [{ tool: { in: [send_email] } }] }
+  - { id: block-shell, action: block, when: [{ tool: { in: [shell_exec] } }] }`}</pre>
             </div>
             <div className="card">
               <div className="index">step 04</div>
