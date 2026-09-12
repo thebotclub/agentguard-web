@@ -42,7 +42,7 @@ export function SiteFooter() {
             <ul>
               <li><Link href="/about">About</Link></li>
               <li><a href="https://calendly.com/hani-thebot/30min">Book a review</a></li>
-              <li><a href="mailto:[email protected]">Contact</a></li>
+              <li><a href="mailto:hani@thebot.club">Contact</a></li>
               <li><a href="https://tribunal.dev">Tribunal (coding agents)</a></li>
             </ul>
           </div>

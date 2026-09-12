@@ -144,7 +144,7 @@ export default function PricingPage() {
           </h2>
           <div className="cta-row" style={{ marginTop: 24 }}>
             <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">Discuss a technical evaluation</a>
-            <a className="btn btn-secondary" href="mailto:[email protected]">Email the project maintainer</a>
+            <a className="btn btn-secondary" href="mailto:hani@thebot.club">Email the project maintainer</a>
           </div>
         </div>
       </section>
