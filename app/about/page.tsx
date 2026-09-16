@@ -77,9 +77,18 @@ export default function AboutPage() {
               intercept, not isolation.
             </li>
             <li>
-              <strong>v0.11.3</strong> — current npm and PyPI. Adapters
+              <strong>v0.11.3</strong> — historical. Adapters
               evaluate through <code>/api/v1/evaluate</code>; contracts
               entry point ships; telemetry opt-in.
+            </li>
+            <li>
+              <strong>v0.12.0</strong> — current npm and PyPI. The{' '}
+              <code>budgets</code> policy block is now enforced; it was accepted
+              and ignored in every earlier release, so a policy that was
+              silently over budget will start refusing actions. Rate-limit
+              counters are storable across a restart and no longer leak, and{' '}
+              <code>require_approval</code> is refused rather than passed
+              through when no approval surface is configured.
             </li>
             <li>
               Live SDKs on{' '}
