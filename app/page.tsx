@@ -113,29 +113,31 @@ export default function Home() {
             <div className="card">
               <div className="index">step 02</div>
               <h3>Evaluate a proposal</h3>
-              <p>The compatibility SDKs can send a proposed action to the policy API and return its decision.</p>
-              <pre className="code-block" style={{ marginTop: 14 }}>{`from agentguard import guard
+              <p>The TypeScript package can load a YAML policy and evaluate it in-process — no network call, no API key.</p>
+              <pre className="code-block" style={{ marginTop: 14 }}>{`import { PolicyEngine } from "@the-bot-club/agentguard";
 
-@guard(policy="local-policy")
-def run_agent(...): ...`}</pre>
+const engine = new PolicyEngine();
+engine.loadFromYaml(yaml);
+engine.evaluate(request, ctx, policy.id);`}</pre>
             </div>
             <div className="card">
               <div className="index">step 03</div>
               <h3>Keep deferred states blocked</h3>
               <p>V1 can allow or block. A require-approval decision blocks dispatch; human approval is deferred.</p>
-              <pre className="code-block" style={{ marginTop: 14 }}>{`limits:
-  daily_spend_aud: 500
-  tools_allow:
-    - search
-    - read_file
-require_approval:
-  - send_email`}</pre>
+              <pre className="code-block" style={{ marginTop: 14 }}>{`id: agent-baseline
+name: Agent baseline policy
+version: 1.0.0
+default: block
+rules:
+  - { id: allow-reads, action: allow, when: [{ tool: { in: [read_file, search] } }] }
+  - { id: approve-email, action: require_approval, when: [{ tool: { in: [send_email] } }] }
+  - { id: block-shell, action: block, when: [{ tool: { in: [shell_exec] } }] }`}</pre>
             </div>
             <div className="card">
               <div className="index">step 04</div>
               <h3>Read the limitations</h3>
-              <p>The repository documents which adapters are compatibility-only and which broker proof is still missing.</p>
-              <pre className="code-block" style={{ marginTop: 14 }}>github.com/thebotclub/agentguard-core</pre>
+              <p>The docs page documents which adapters are compatibility-only and which broker proof is still missing.</p>
+              <pre className="code-block" style={{ marginTop: 14 }}>agentguard.tech/docs/#limitations</pre>
             </div>
           </div>
         </div>
@@ -156,8 +158,8 @@ require_approval:
               </p>
               <ul style={{ color: 'var(--text-muted)', lineHeight: 1.8, marginTop: 18, paddingLeft: 18 }}>
                 <li>Current artifact: TypeScript compatibility hook.</li>
-                <li>Strict mode can return a block when evaluation fails.</li>
-                <li>Permissive mode allows on evaluation error.</li>
+                <li>Evaluation failures return a block; there is no fail-open path.</li>
+                <li><code>strict: false</code> is refused at startup, not honoured.</li>
                 <li>Executor-owned MCP-stdio broker proof is pending.</li>
               </ul>
               <div style={{ marginTop: 24, display: 'flex', gap: 10 }}>
@@ -185,7 +187,7 @@ require_approval:
     "installs": {
       "agentguard": {
         "source": "npm",
-        "spec": "@the-bot-club/agentguard@0.11.2"
+        "spec": "@the-bot-club/agentguard@0.11.3"
       }
     }
   }
@@ -234,7 +236,7 @@ require_approval:
           <div className="price-grid">
             <div className="price-card">
               <h3>TypeScript</h3>
-              <div className="amount">0.11.2 <small>/ TypeScript</small></div>
+              <div className="amount">0.11.3 <small>/ TypeScript</small></div>
               <ul>
                 <li>Published package manifest</li>
                 <li>Canonical local v1 contracts</li>
@@ -244,7 +246,7 @@ require_approval:
             </div>
             <div className="price-card featured">
               <h3>Python</h3>
-              <div className="amount">0.11.2 <small>/ Python</small></div>
+              <div className="amount">0.11.3 <small>/ Python</small></div>
               <ul>
                 <li>Independent compatibility release</li>
                 <li>HTTP policy evaluation</li>

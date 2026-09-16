@@ -27,9 +27,9 @@ export default function OpenClawPage() {
             <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
               Discuss an OpenClaw evaluation
             </a>
-            <a className="btn btn-secondary" href="https://github.com/thebotclub/agentguard-core/blob/main/SPEC.md#openclaw">
-              Read the source spec →
-            </a>
+            <Link className="btn btn-secondary" href="/docs/#openclaw">
+              Read the OpenClaw docs →
+            </Link>
           </div>
         </div>
       </section>
@@ -92,9 +92,11 @@ export default function OpenClawPage() {
                 to the AgentGuard HTTP API.
               </p>
               <p style={{ color: 'var(--text-muted)', marginTop: 14, lineHeight: 1.7 }}>
-                Strict mode can return a block result when evaluation fails;
-                permissive mode allows on error. Neither mode owns the underlying
-                tool capability under a separate identity. See{' '}
+                Evaluation failures return a block result, and there is no
+                fail-open path: the plugin refuses to register at all when it is
+                configured with <code>strict: false</code>. Failing closed still
+                does not own the underlying tool capability under a separate
+                identity. See{' '}
                 <a href="https://openclaw.ai" style={{ color: 'var(--teal)' }}>OpenClaw</a>{' '}
                 for the runtime project itself.
               </p>
@@ -119,7 +121,7 @@ export default function OpenClawPage() {
     "installs": {
       "agentguard": {
         "source": "npm",
-        "spec": "@the-bot-club/agentguard@0.11.2"
+        "spec": "@the-bot-club/agentguard@latest"
       }
     }
   }

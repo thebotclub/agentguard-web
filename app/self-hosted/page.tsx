@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Self-hosting status',
@@ -25,9 +26,9 @@ export default function SelfHostedPage() {
             <a className="btn btn-primary" href="https://calendly.com/hani-thebot/30min">
               Discuss source evaluation
             </a>
-            <a className="btn btn-secondary" href="https://github.com/thebotclub/agentguard-core/tree/main/self-hosted#readme">
-              Read repository notes →
-            </a>
+            <Link className="btn btn-secondary" href="/docs/#source">
+              Read about source access →
+            </Link>
           </div>
         </div>
       </section>

@@ -590,6 +590,12 @@ hr.rule { border: 0; border-top: 1px solid var(--border); margin: 0; }
 }
 .toc .toc-num { color: var(--text-dim); display: inline-block; width: 28px; }
 
+/* Anchor targets clear the sticky header when a TOC link jumps to them */
+.prose h2[id],
+.prose h3[id] {
+  scroll-margin-top: 84px;
+}
+
 /* ============================================================ */
 /* Playground page                                                */
 /* ============================================================ */

@@ -71,10 +71,15 @@ export default function AboutPage() {
               adapters only; not executor-owned firewall proof.
             </li>
             <li>
-              <strong>v0.11.2</strong> — current npm and PyPI. Fail-open{' '}
+              <strong>v0.11.2</strong> — historical. Fail-open{' '}
               <code>strict: false</code> is a hard startup error. Named GitHub
               file-write intercept is documented on the proof page as configured
               intercept, not isolation.
+            </li>
+            <li>
+              <strong>v0.11.3</strong> — current npm and PyPI. Adapters
+              evaluate through <code>/api/v1/evaluate</code>; contracts
+              entry point ships; telemetry opt-in.
             </li>
             <li>
               Live SDKs on{' '}
@@ -84,9 +89,9 @@ export default function AboutPage() {
               and{' '}
               <a href="https://pypi.org/project/agentguard-tech/">PyPI</a>{' '}
               under{' '}
-              <a href="https://github.com/thebotclub/agentguard-core/blob/main/LICENSE">
+              <Link href="/docs/#source">
                 BSL 1.1
-              </a>
+              </Link>
               .
             </li>
             <li>
