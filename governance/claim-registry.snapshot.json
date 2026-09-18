@@ -1,8 +1,8 @@
 {
   "schemaVersion": "agentguard.claim-registry-snapshot/v1",
-  "sourceCoreCommit": "86ce858b47d2c84e29f2cabf04b670df4c8f3d4b",
-  "registryDigest": "sha256:8cef0f6a8ccae417c60a2a8fbc0864ad133e365b5a30fd421d5fed54eb4bde1b",
-  "generatedAt": "2026-08-28T05:19:03Z",
+  "sourceCoreCommit": "63f2d44965b028c497e4c4f183c40e8e1ce2150f",
+  "registryDigest": "sha256:81d317e15438944edeee1e7484942e2d7fd8750ff18bca57b22c0d64d22f0386",
+  "generatedAt": "2026-09-18T11:22:12Z",
   "claimsDigest": "sha256:f8e026bd1e0b5952d226f0e41d96ccc793f4737fed8eea2876de13f490bb0d7d",
   "claims": [
     {
