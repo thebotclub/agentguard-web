@@ -18,8 +18,8 @@ export default function DocsPage() {
           policy schema, the OpenClaw and MCP adapters, authentication,
           telemetry, the kill switch, and what is not proven yet. Every
           sample below is real code from{' '}
-          <code>@the-bot-club/agentguard@0.12.0</code> and{' '}
-          <code>agentguard-tech==0.12.0</code>; nothing here is
+          <code>@the-bot-club/agentguard@0.13.0</code> and{' '}
+          <code>agentguard-tech==0.13.0</code>; nothing here is
           aspirational.
         </p>
 
@@ -243,7 +243,7 @@ decision = guard.evaluate(tool="send_email", params={"to": "finance@example.com"
     "installs": {
       "agentguard": {
         "source": "npm",
-        "spec": "@the-bot-club/agentguard@0.12.0"
+        "spec": "@the-bot-club/agentguard@0.13.0"
       }
     }
   }
@@ -340,7 +340,7 @@ Content-Type: application/json
             <code>evaluate()</code> call:
           </p>
           <pre><code>{`{
-  "sdk_version": "0.12.0",
+  "sdk_version": "0.13.0",
   "language": "node",
   "node_version": "v20.11.0",
   "os_platform": "linux"
