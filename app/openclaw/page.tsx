@@ -121,7 +121,7 @@ export default function OpenClawPage() {
     "installs": {
       "agentguard": {
         "source": "npm",
-        "spec": "@the-bot-club/agentguard@0.12.0"
+        "spec": "@the-bot-club/agentguard@0.13.0"
       }
     }
   }

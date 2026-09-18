@@ -46,8 +46,8 @@ export default function TrustPage() {
           </p>
           <p>
             Current published packages are TypeScript{' '}
-            <code>@the-bot-club/agentguard@0.12.0</code> and Python{' '}
-            <code>agentguard-tech==0.12.0</code>. <code>strict: false</code>{' '}
+            <code>@the-bot-club/agentguard@0.13.0</code> and Python{' '}
+            <code>agentguard-tech==0.13.0</code>. <code>strict: false</code>{' '}
             allow-on-error is a hard startup error. The OpenClaw hook and MCP
             adapters call <code>POST /api/v1/evaluate</code> on the AgentGuard API
             with <code>X-API-Key</code>; the API also accepts the 0.11.2{' '}

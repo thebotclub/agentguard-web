@@ -82,13 +82,25 @@ export default function AboutPage() {
               entry point ships; telemetry opt-in.
             </li>
             <li>
-              <strong>v0.12.0</strong> — current npm and PyPI. The{' '}
+              <strong>v0.12.0</strong> — historical. The{' '}
               <code>budgets</code> policy block is now enforced; it was accepted
               and ignored in every earlier release, so a policy that was
               silently over budget will start refusing actions. Rate-limit
               counters are storable across a restart and no longer leak, and{' '}
               <code>require_approval</code> is refused rather than passed
               through when no approval surface is configured.
+            </li>
+            <li>
+              <strong>v0.13.0</strong> — current npm and PyPI. The{' '}
+              <code>targets</code> policy block is now enforced; it was accepted
+              and ignored in every earlier release, so a policy scoped to named
+              agents applied to every agent. An agent a policy does not target
+              is now refused rather than handed the policy default. A held
+              action with no approval surface is refused with{' '}
+              <code>403</code> instead of a <code>202</code> that invited the
+              caller to poll a gate that would never resolve. Token and spend
+              budgets gained a reporting path, so they enforce against usage the
+              caller reports.
             </li>
             <li>
               Live SDKs on{' '}
