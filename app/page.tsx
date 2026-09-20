@@ -187,7 +187,7 @@ rules:
     "installs": {
       "agentguard": {
         "source": "npm",
-        "spec": "@the-bot-club/agentguard@0.13.0"
+        "spec": "@the-bot-club/agentguard@0.15.0"
       }
     }
   }
@@ -236,7 +236,7 @@ rules:
           <div className="price-grid">
             <div className="price-card">
               <h3>TypeScript</h3>
-              <div className="amount">0.13.0 <small>/ TypeScript</small></div>
+              <div className="amount">0.15.0 <small>/ TypeScript</small></div>
               <ul>
                 <li>Published package manifest</li>
                 <li>Canonical local v1 contracts</li>
@@ -246,7 +246,7 @@ rules:
             </div>
             <div className="price-card featured">
               <h3>Python</h3>
-              <div className="amount">0.13.0 <small>/ Python</small></div>
+              <div className="amount">0.15.0 <small>/ Python</small></div>
               <ul>
                 <li>Independent compatibility release</li>
                 <li>HTTP policy evaluation</li>
