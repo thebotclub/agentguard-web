@@ -91,7 +91,7 @@ export default function AboutPage() {
               through when no approval surface is configured.
             </li>
             <li>
-              <strong>v0.13.0</strong> — current npm and PyPI. The{' '}
+              <strong>v0.13.0</strong> — historical. The{' '}
               <code>targets</code> policy block is now enforced; it was accepted
               and ignored in every earlier release, so a policy scoped to named
               agents applied to every agent. An agent a policy does not target
@@ -101,6 +101,28 @@ export default function AboutPage() {
               caller to poll a gate that would never resolve. Token and spend
               budgets gained a reporting path, so they enforce against usage the
               caller reports.
+            </li>
+            <li>
+              <strong>v0.14.0</strong> — historical. <code>policyAppliesTo()</code>{' '}
+              lets a caller ask whether a policy governs it before{' '}
+              <code>targets</code> starts refusing; a block that matched nothing
+              was previously indistinguishable from a policy that blocks
+              everything. <code>riskScore</code> became one formula — the
+              offline path had hard-coded the <code>medium</code> multiplier, so
+              a <code>critical</code> session scored half what the same policy
+              scored online.
+            </li>
+            <li>
+              <strong>v0.15.0</strong> — current npm and PyPI. Rate-limit
+              counters are namespaced by policy. They were keyed by rule id
+              alone, so one engine holding two policies that both named a rule
+              shared a single counter and one policy&apos;s traffic throttled
+              the other&apos;s. <strong>Counters reset once on upgrade</strong>,
+              and a rate-limit snapshot taken before this release no longer
+              applies. The API service also stopped keeping its own copy of the
+              evaluation algorithm, so budgets, targets and{' '}
+              <code>riskScore</code> are enforced there on the same code path as
+              everywhere else.
             </li>
             <li>
               Live SDKs on{' '}
