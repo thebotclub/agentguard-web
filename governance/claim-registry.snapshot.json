@@ -1,9 +1,9 @@
 {
   "schemaVersion": "agentguard.claim-registry-snapshot/v1",
-  "sourceCoreCommit": "40c14a33dac5785c3fa7afe65282671158e54bde",
-  "registryDigest": "sha256:81d317e15438944edeee1e7484942e2d7fd8750ff18bca57b22c0d64d22f0386",
-  "generatedAt": "2026-09-20T17:26:42Z",
-  "claimsDigest": "sha256:f8e026bd1e0b5952d226f0e41d96ccc793f4737fed8eea2876de13f490bb0d7d",
+  "sourceCoreCommit": "c03aaee7ff9e352d07d5e56d1ca1ebc51bf318b7",
+  "registryDigest": "sha256:c728bd9a3067da23f1c154057baeb16478567b3ae3feec6e856a22480cdc9c05",
+  "generatedAt": "2026-11-02T00:03:52Z",
+  "claimsDigest": "sha256:d2912e133176f410110cd613a8981c8c98359cfa842f2dc1a4952d810ff0f2e2",
   "claims": [
     {
       "id": "public.compliance-and-assurance",
@@ -27,8 +27,8 @@
         "No current publishable evidence in this inventory proves regulator sign-off, auditor acceptance, compliance outcomes, or universal enforcement."
       ],
       "qualification": "These locators are registered as correction-required public copy, not verified outcomes.",
-      "reviewedAt": "2026-08-28T00:00:00Z",
-      "expiresAt": "2026-09-27T00:00:00Z",
+      "reviewedAt": "2026-10-30T00:00:00Z",
+      "expiresAt": "2026-11-29T00:00:00Z",
       "reviewer": "security-product",
       "surfaceIds": [
         "web.blog.apra-article",
@@ -61,8 +61,8 @@
         "No comparative market study or exact real-runtime proof is registered."
       ],
       "qualification": "Current integration evidence supports compatibility source shape only.",
-      "reviewedAt": "2026-08-28T00:00:00Z",
-      "expiresAt": "2026-09-27T00:00:00Z",
+      "reviewedAt": "2026-10-30T00:00:00Z",
+      "expiresAt": "2026-11-29T00:00:00Z",
       "reviewer": "phase-1-authority-review",
       "surfaceIds": [
         "web.openclaw.page"
@@ -90,8 +90,8 @@
         "This phase does not authorize paid-tier promises, SLA publication, or a broad relaunch."
       ],
       "qualification": "All commercial and distribution locators remain correction-required until evidence is resolved.",
-      "reviewedAt": "2026-08-28T00:00:00Z",
-      "expiresAt": "2026-09-27T00:00:00Z",
+      "reviewedAt": "2026-10-30T00:00:00Z",
+      "expiresAt": "2026-11-29T00:00:00Z",
       "reviewer": "phase-1-authority-review",
       "surfaceIds": [
         "web.pricing.page",
@@ -120,8 +120,8 @@
         "Repository source shows assertions but contains no current publishable fleet or customer evidence."
       ],
       "qualification": "The assertions remain visibly red for evidence resolution or withdrawal.",
-      "reviewedAt": "2026-08-28T00:00:00Z",
-      "expiresAt": "2026-09-27T00:00:00Z",
+      "reviewedAt": "2026-10-30T00:00:00Z",
+      "expiresAt": "2026-11-29T00:00:00Z",
       "reviewer": "phase-1-authority-review",
       "surfaceIds": [
         "web.about.history",
@@ -155,8 +155,8 @@
         "Core API install examples now match package manifests; website routes, configuration, and examples remain separately qualified until corrected."
       ],
       "qualification": "A source example proves only its exact route or manifest relationship, not deployment, publication, or broader product availability.",
-      "reviewedAt": "2026-08-28T00:00:00Z",
-      "expiresAt": "2026-09-27T00:00:00Z",
+      "reviewedAt": "2026-10-30T00:00:00Z",
+      "expiresAt": "2026-11-29T00:00:00Z",
       "reviewer": "docs-maintainers",
       "surfaceIds": [
         "web.blog.index",
