@@ -11,4 +11,6 @@
   <url><loc>https://agentguard.tech/self-hosted/</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://agentguard.tech/blog/</loc><priority>0.6</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://agentguard.tech/about/</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://agentguard.tech/privacy/</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://agentguard.tech/terms/</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
 </urlset>

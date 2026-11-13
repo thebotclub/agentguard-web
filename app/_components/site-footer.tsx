@@ -44,13 +44,19 @@ export function SiteFooter() {
               <li><a href="https://calendly.com/hani-thebot/30min">Book a review</a></li>
               <li><a href="mailto:hani@thebot.club">Contact</a></li>
               <li><a href="https://tribunal.dev">Tribunal (coding agents)</a></li>
+              <li><Link href="/privacy">Privacy</Link></li>
+              <li><Link href="/terms">Terms</Link></li>
             </ul>
           </div>
         </div>
         <div className="footer-bottom">
           <div>© {new Date().getFullYear()} The Bot Club Pty Ltd · ABN 99 695 980 226</div>
-          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem' }}>
-            Proof status pending · built in Sydney
+          <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', alignItems: 'center' }}>
+            <Link href="/privacy" style={{ color: 'var(--text-dim)' }}>Privacy</Link>
+            <Link href="/terms" style={{ color: 'var(--text-dim)' }}>Terms</Link>
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem' }}>
+              Proof status pending · built in Sydney
+            </div>
           </div>
         </div>
       </div>
