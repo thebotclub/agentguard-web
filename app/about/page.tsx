@@ -176,7 +176,7 @@ export default function AboutPage() {
         >
           <h3 style={{ marginTop: 0 }}>The Bot Club Pty Ltd</h3>
           <p style={{ color: 'var(--text-muted)', marginBottom: 0 }}>
-            ABN 99 695 980 226 · Sydney, Australia ·{' '}
+            ABN 99 695 980 226 · Melbourne, Australia ·{' '}
             <a href="mailto:hani@thebot.club">hani@thebot.club</a>
           </p>
         </div>
