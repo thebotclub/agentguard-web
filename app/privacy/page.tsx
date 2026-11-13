@@ -67,6 +67,18 @@ export default function PrivacyPage() {
             payload, and our hosting provider may log the request.
           </p>
           <p>
+            <strong>Hosted API signup.</strong> The documentation on this
+            website describes <code>POST /api/v1/signup</code> on{' '}
+            <code>api.agentguard.tech</code>. If you use that endpoint, we
+            store the required <code>name</code> field (the docs treat this as
+            an agent name) and, if you supply one, your email address, on a
+            tenant record, and we issue an API key. If you submit an email
+            that already has an account, we use it to identify that account
+            and issue a new key. You may omit the email, in which case the
+            account is stored without one. The endpoint does not collect an
+            organisation field.
+          </p>
+          <p>
             <strong>Information collected automatically.</strong> The website is
             hosted on Cloudflare. Cloudflare and our hosting configuration may
             log standard request information including IP address, user agent,
@@ -92,6 +104,10 @@ export default function PrivacyPage() {
               conversations.
             </li>
             <li>Operate the policy evaluator and related website features.</li>
+            <li>
+              Create or recover a hosted API tenant account and issue an API
+              key, if you use the signup endpoint.
+            </li>
             <li>Maintain a record of business communications.</li>
             <li>Operate, secure, and improve the website.</li>
             <li>Comply with our legal obligations.</li>
