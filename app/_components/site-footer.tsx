@@ -55,7 +55,7 @@ export function SiteFooter() {
             <Link href="/privacy" style={{ color: 'var(--text-dim)' }}>Privacy</Link>
             <Link href="/terms" style={{ color: 'var(--text-dim)' }}>Terms</Link>
             <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem' }}>
-              Proof status pending · built in Sydney
+              Proof status pending · built in Melbourne
             </div>
           </div>
         </div>
